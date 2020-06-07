@@ -1,0 +1,101 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Montserrat', sans-serif
+    background-color: #fff9e3
+    margin: 0
+    line-height: 2
+    display: flex
+    flex-direction: column
+    align-items: center
+nav
+    position: fixed
+    width: 100%
+    background-color: #683700
+    li
+        list-style: none
+    .nav
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .menu
+            position: relative
+            border-left: 1px solid #fff9e3
+            padding: 0 10px
+            cursor: pointer
+            .subMenu
+                position: fixed
+                text-align: center
+                background-color: #251010
+                width: 100%
+                left: 0
+                text-align: left
+                z-index: 1
+                ul
+                    margin-left: 30px
+                    li
+                        a
+                            display: block
+                            width: 100%
+                            font-weight: normal
+                    li:hover:not(.emptyLi)
+                        background-color: #3d1a1a
+
+            a
+                align-items: center
+                text-decoration: none
+                color: #fff9e3
+                font-weight: normal
+
+        .menu:last-child
+            border-right: 1px solid #fff9e3
+    .hideSubMenu
+        display: none
+h1
+    line-height: 4
+    text-align: center
+    margin-top: 0px
+
+h3
+    border-top: 1px solid #6b3d00
+    margin: 50px 0 10px 0
+.container
+    max-width: 1000px
+.example
+    background-color: rgb(253, 197, 124)
+    padding: 2px
+    font-family: monospace
+.tab
+    border-top: 1px solid #000
+    border-bottom: 1px solid #000
+section
+    border: 2px solid #000
+    margin: 10px 20px
+    padding: 0 10px
+    li
+        list-style-position: inside
+    p
+        margin: 15px 0
+    emptyLi
+hr
+    margin: 10px -10px
+img
+    width: 100%
+.showExample
+    display: block
+    margin: 10px
+    padding: 10px
+    background-color: #683700
+    color: white
+    font-weight: bold
+    border: none
+    border-radius: 10px
+.showExample:hover, .showExample:focus
+    background: white
+    color: #683700
+    outline: none
+.hide
+    display: none

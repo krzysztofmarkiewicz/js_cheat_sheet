@@ -1,0 +1,2959 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT Cheat Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul class='nav'>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#data-types'>Typy Danych</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#simplyTypes'>Typy proste</a> </li>
+
+                        <li>
+                            <a href="#string">String</a>
+                        </li>
+                        <li>
+                            <a href="#number">Number</a>
+                        </li>
+                        <li>
+                            <a href="#boolean">Boolean</a>
+                        </li>
+                        <li>
+                            <a href="#undefined">UNDEFINED</a>
+                        </li>
+                        <li>
+                            <a href="#null">NULL</a>
+                        </li>
+                        <li>
+                            <a href="#symbol">Symbol</a>
+                        </li>
+                        <li class="emptyLi"><br></li>
+                        <li><a href='#complex'>Typy złożone</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle '><a href='#objects'>Obiekty</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#createObj'>Tworzenie obiektów</a></li>
+                        <li><a href='#callToObj'>Odwoływanie się do obiektu
+                            </a></li>
+                        <li><a href='#objAddDel'>Dodawanie i usuwanie w obiektach</a></li>
+                        <li><a href='#objcons'>Konstruktor i protoptyp</a></li>
+                        <li><a href='#classes'>Klasy</a></li>
+                        <li><a href='#forin'>PĘTLA FOR IN</a></li>
+                        <li><a href='#this'>this</a></li>
+                        <li><a href='#thisAndFuncArrow'>this i funkcja strzałkowa</a></li>
+                        <li><a href='#call'>CALL</a></li>
+                        <li><a href='#apply'>APPLY</a></li>
+                        <li><a href='#bind'>BIND</a></li>
+                        <li><a href='#summary'>Podsumowanie this,call,apply,bind</a></li>
+                        <li><a href='#objAss'>Object.assign()</a></li>
+                        <li><a href='#getAndSet'>GETTERS & SETTERS</a></li>
+                        <li><a href='#destructuring'>DESTRUKTURYZACJA</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#operators'>Operatory</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#arithmetic'>Arytmetyczne</a></li>
+                        <li><a href='#assignment'>Przypisania</a></li>
+                        <li><a href='#comparison'>Porównania</a></li>
+                        <li><a href='#logical'>Logiczne</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#conditional-statements'>Instrukcje Warunkowe</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul> <li><a href='#if_else'>IF ELSE</a></li>
+                    <li><a href='#else_if'>ELSE IF</a></li>
+                    <li><a href='#switch'>SWITCH</a></li>
+                    <li><a href='#conditional'>Operator warunkowy</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#loops'>Pętle</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#for'>Pętla FOR
+                            </a></li>
+                        <li><a href='#while'>Pętla WHILE
+                            </a></li>
+                        <li><a href='#do_while'>Pętla DO...WHILE</a></li>
+                        <li><a href='#for_of'>Pętla FOR OF</a></li>
+                        <li><a href='#for_in'>Pętla FOR IN</a></li>
+                        <li><a href='#for_each'>Pętla FOREACH</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#arrays'>Tablice</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#functions'>Funkcje</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#func1'>FUNKCJA ZADEKLAROWANA/IMIENNA</a></li>
+                        <li><a href='#func2'>WYRAŻENIE FUNKCYJNE I FUNKCJA ANONIMOWA</a></li>
+                        <li><a href='#func3'>FUNKCJA STRZAŁKOWA</a></li>
+                        <li><a href='#func4'>ZAKRESY</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#api'>API</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#fetch'>FETCH,THEN,CATCH</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#XMLHttpRequest'>XMLHttpRequest</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#promise'>Promise</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#getPost'>GET, POST, PUT, PATCH, DELETE</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#axios'>AXIOS</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#ajaxJson'>AJAX & JSON</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#ajax'>AJAX</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href='#json'>JSON</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#async'>ASYNC, AWAIT</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#dom'>DOM</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                        <li><a href='#window'>Window</a></li>
+                        <li><a href='#document'>Document</a></li>
+                        <li><a href='#getElem'>Pobieranie elementów</a></li>
+                        <li><a href='#createElem'>Tworzenie elementów</a></li>
+                        <li><a href='#delElem'>Usuwanie elementów</a></li>
+                        <li><a href='#addEventListener'>addEventListener</a></li>
+                        <li><a href='#styling'>Stylowanie w JS</a></li>
+                        <li><a href='#classCss'>Dodawanie, usuwanie i zamian klas w css</a></li>
+                        <li><a href='#attributes'>Atrybuty</a></li>
+                        <li><a href='#relationship'>Relacje rodzinne
+                            </a></li>
+                        <li><a href='#dataset'>Dataset</a></li>
+                        <li><a href='#popups'>alert, confirm, prompt</a></li>
+                        <li><a href='#id'>ID jako zmienna</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#setTimeout'>setTimeout i setInterval
+                </a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#math'>Obiekt Math
+                </a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#regexp'>RegExp</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#strict-mode'>Strict Mode</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+            <ul class='menu'>
+                <li class='menuTitle'><a href='#codes'>Gotowce</a></li>
+                <li class='subMenu hideSubMenu'>
+                    <ul>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </nav>
+    <h1>JAVASCRIPT - notatki</h1>
+    <div class="container">
+        <section>
+            <p>Przydatne linki
+                <ul>
+                    <li><a href="https://developer.mozilla.org/pl/docs/Learn/JavaScript/Pierwsze_kroki/What_is_JavaScript"
+                            target="_blank">KURS JS na MDN</a></li>
+                    <li><a href="http://kursjs.pl/index.php" target="_blank">KURS JS dla superbohaterów - SUPER
+                            STRONA</a></li>
+                    <li><a href="https://technikinformatyk.pl/kursy/kurs/javascript/lekcja/javascript-petle-cwiczenia-interaktywne/"
+                            target="_blank">cwiczenia</a>
+                    </li>
+                    <li><a href="https://repl.it/repls/AcclaimedOfficialSandbox" target="_blank">Ściąga Metody na
+                            tablicach w
+                            repl.it(sandbox
+                            js)</a></li>
+                </ul>
+            </p>
+
+        </section>
+        <section>
+            <h2>TWORZENIE ZMIENNEJ</h2>
+            <ol>
+                <li>zmienne tworzymy zawsze po angielsku</li>
+                <li>wielkość liter ma znaczenie - javascript jest jezykiem case sensitive</li>
+                <li>najlepiej uzywac notacji wielbłądziej camelCase</li>
+                <li>w zmiennej nie możemy używać myślników(minus), kropek, spacji (jedynie _)</li>
+                <li>nie możemy ustwaiać cyfr jako pierwszego znaku w nazwie zmiennej</li>
+                <li>nie rozpoczynamy nazwy zmiennej od dużej litery</li>
+                <li>nie mozemy uzyć zarezerwowanego słowa <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar"
+                        target="_blank">lista
+                        na
+                        mdn</a>
+
+                </li>
+                <li>zakres lokalny i globalny - jezeli zmienna jest zadeklaroawna w zakresie globalnym mamy do niej
+                    dostep w
+                    każdym miejscu kodu, jesli jest zadeklarowana w zaresie lokalnym (wewn jakiejs funkcji) to mamy do
+                    niej
+                    dostep w obrebie tej funcji</li>
+                <li>do zmiennej globnalnej przed nazwa funcji dodajemy znak dolara (dobra praktyka a nie obowiazek),
+                    zeby
+                    bylo
+                    wiadomo ze jest to zmienna globalna</li>
+                <li>w zmiennej lokalnej mozemy zadeklaroawc jeszecze raz taka sama zmienna i nie wplynie ona na globalna
+                </li>
+            </ol>
+        </section>
+        <section id="data-types">
+            <h2>TYPY DANYCH</h2>
+            <h3 id="simplyTypes">TYPY PROSTE</h3>
+            <h4 id="string">STRING</h4>
+            <p>SUPER STRING / TEMPLATE STRING - stringa zaisujemy w grawisach a nie w cudzyslowiach </p>
+            <ul>
+                <li>console.log(`Cześć, jestem ${name} i mam ${age} lat`);</li>
+                <li>starym sposobem zapisalibysmy to tak
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">console.log('Cześć, jestem ' + name + ' i mam ' + age + ' lat');</pre>
+                    </div>
+                </li>
+                <li>w super string zeby tekst przeszedł do nowej linii wystarczy kliknać (enter) <br>
+                    starym sposobem w stringu musielibysmy wpisac "\n" (takie br)
+
+                </li>
+            </ul>
+            <p>STRING METODY - ważne</p>
+            <ul>
+                <li>.includes() - sprawdza czy jakis string jest zawarty w innym stringu</li>
+                <li>.indexOf() - podaje liczbe jaka jest ilosc znakow do pierwszego wyszukiwanego slowa (mozna wpisac
+                    wartosc
+                    poczatkowa</li>
+                <li>.lastIndexOf() - podaje liczbe jaka jest ilosc znakow do ostatniego wyszukiwanego slowa (mozna
+                    wpisac
+                    wartosc poczatkowa</li>
+                <li>.match() - sprawdza czy wyrażenie pasuje do złożonego wzorca</li>
+                <li>.padStart() i .padEnd() - służą do „automatycznego” rozszerzania ciągu znaków. przyjmują dwa
+                    argumenty
+                    (dlugosc o ile ma byc ciag rozszerzony a drugi znak/i o jakie ma byuc roszerzony</li>
+                <li>.repeat - słzy do powtarzania stringa odpowiednia ilosc razy zadeklarowana w funkcji</li>
+                <li>.repalce - zamienia stringi zadeklaroawne </li>
+                <li>.slice - Wydobywa część łańcucha znaków i zwraca go jako nowy łańcuch znaków.</li>
+                <li>.split - Rozbija podany tekst na tablicę mniejszych kawałków, z których każdy w oryginalnym tekście
+                    był
+                    rozdzielony od pozostałych określonym separatorem. Sam separator nie jest dołączany do wynikowej
+                    tablicy.
+                </li>
+                <li>startsWith() - sprawdza czy string zaczyna sie od zdeklarowanego innego stringa (mozna podac od
+                    ktorego
+                    znaku ma sprawdzac</li>
+                <li>.substring - Metoda ta wycina z danego tekstu łańcuch (zwraca podciąg) począwszy od wskazanej
+                    pozycji
+                    (licząc od zera) do pozycji końcowej podciągu.</li>
+                <li>.trim - usuwa białę znaki przed i po ciagu znaków (sa rowniez triomEnd i .trimStart</li>
+            </ul>
+            <h4 id="number">NUMBER</h4>
+            <p>metody</p>
+            <ul>
+                <li>.isInteger() - Sprawdza czy liczba jest całkowita.</li>
+                <li>.toFixed() - można ustalć miejsca po przecinku</li>
+                <li>.toPrecision - uśrednia do zadeklarowanej ilosci miejsc po przecinku</li>
+            </ul>
+            <h4 id="boolean">BOOLEAN</h4>
+            <ul>
+                <li>boolaan zwraca true jesli jest podana wartosc lub wpiszemy true lub w stringu sa znaki </li>
+                <li>bolean zwraca false jesli ustawimy false, undefined, null, 0, NaN lub pusty string</li>
+            </ul>
+            <h4 id="undefined">UNDEFINED</h4>
+            <p> jesli nie przypiszemyu wartosci to js ustali wartosc na undefined </p>
+            <h4 id="null">NULL</h4>
+            <p>podobny do undefined ale to umieszczamy w kodzie kiedy tego chcemy</p>
+            <h4 id="symbol">SYMBOL</h4>
+            <p>przydaje sie przy obiektach
+            </p>
+
+            <h3 id="complex">TYPY ZŁOŻONE (OBIEKTY)</h3>
+            <ul>
+                <li>obiekty - wpisujemy w nawiasach klamrowych</li>
+                <li>funkcje</li>
+                <li>tablice - do tablicy mozemy wpisac kazdy rodzaj danych</li>
+            </ul>
+        </section>
+        <section id="objects">
+            <h2>OBIEKTY</h2>
+            <a href="http://kursjs.pl/kurs/obiekty/obiekty.php" target="_blank">KURSJS.PL - OBIEKTY</a>
+            <h3 id='createObj'>Tworzenie obiektów</h3>
+            <p>objekty tworzym zapisujemy w nawiasach klamrowych. Obiekty posiadają właściowści i metody oraz inne
+                obiekty.
+                Właściwości zapisujemy poprzez key : value (klucz i wartość). Metody to funkcje.</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">example:
+const myObject = {
+    key : value,
+    key : value
+
+    newObject: {
+        key : value,
+        key : value,
+        key : value
+    },
+
+    nazwa funkcji (){
+        kod do wykonania
+    }
+//lub
+    nazwa_funkcji : function (){
+        kod do wykonania
+    }
+
+};
+</pre>
+            </div>
+            <h3 id='callToObj'>Odwoływanie się do obiektu</h3>
+            <p>nazwa_obiektu.właściwość</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">const newUser = {
+    name : 'Kris',
+    age : 37,
+    car: {
+        brand : 'Ford',
+        color : 'black',
+        year : '2015',
+        sound (){
+            console.log('Brum brum');
+        }
+    }
+};
+console.log(newUser.name);
+console.log(newUser.car.color);
+newUser.car.sound();
+            </pre>
+            </div>
+            <h3 id='objAddDel'>Dodawanie i usuwanie w obiektach</h3>
+            <p><Strong>Dodawanie</Strong><br>
+                nazwa_tablicy.nazwa_nowej_właściwości = 'wartość'</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">newUser.country = 'Polska';
+//lub
+newUser['nazwa-z-niedozwolonym-znakiem'] = 'wartość';
+</pre>
+            </div>
+            <p>dodawanie wartości do klucza z innej zmiennej</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">example:
+const name = 'Drops';
+const age = 4;
+
+const dog = {
+    name : name,
+    age : age
+}
+</pre>
+            </div>
+            lub jeśli nazwa klucza i zmiennej do której się odwołuje jest taka sama to:
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">example:
+    const name = 'Drops';
+    const age = 4;
+    
+    const dog = {
+        name,
+       age    
+</pre>
+            </div>
+
+            <p><Strong>Usuwanie</Strong>
+                delete nazwa_obiektu.klucz</p>
+
+            <h3 id='objcons'>Konstruktor i protoptyp</h3>
+            <p>Obecnie do tworzenia konstruktorów i prototypów używa się <a href="#classes">klas</a></p>
+            <p><strong>Konstruktor</strong> to taka funkcja do tworzenia obiektów. Pryjęło się, żeby konstruktory
+                nazywać z
+                wielkiej litery, aby odróżnić je od zwykłych funkcji</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">function User (name, age){
+this.name = name;
+this.age = age;
+this.hello = function(){
+    console.log(`Użytkownik ma na imię ${this.name} i ma ${this.age} lat`)
+}
+}
+const newUser = new User('Kris', 23);
+const newUser2 = new User('Adam', 27);
+const newUser3 = new User('Kasia', 19);
+
+newUser.hello();
+newUser2.hello();
+newUser3.hello();
+</pre>
+            </div>
+            <p><strong>Prototyp</strong> - tworzy element, którym będzie dodawana do każdego obiektu zbudowanego na
+                bazie
+                konstruktora podanego w prototypie <br>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">nazwa.konstruktora.prototyp.nazwa_klucza = wartość_klucza
+lub                    
+nazwa_konstuktora.prototyp.nazwa_funkcji(wewn obiektu) = function(){
+    kod do wykonania
+}
+</pre>
+                </div>
+                Dziedziczenie działa tak, że jeśli w obiekcie jest metoda o danej nazwie, a Ty stworzysz prototyp o tej
+                samej nazwie. To działać będzie metoda stworozna w obiekcie.
+            </p>
+
+            <h3 id='classes'>KLASY</h3>
+            <p>Klasy służą do tworzenia konstruktorów i prototypów</p>
+            <p>Klasy tworzymy tak
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">class nazwa_klasy {
+konstruktor
+prototypy         
+}</pre>
+                </div>lub tak (gorsza metoda)
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">const nazwa_klasy = class{}</pre>
+                </div>
+            </p>
+            <p>Poniżej przykład klasy oraz porównanie z zapisem starym sposobem</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+class Food {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    showMeal() {
+        console.log(`${this.name} kosztuje ${this.price}zł`)
+    }
+}
+
+const sandwich = new Food('Kanapka', 8)
+sandwich.showMeal()
+
+
+//STARY ZAPIS KONSTRUKTORA I PROTOTYPU
+
+//to jest konstruktor (funkcja)
+function Food2(name, price) {
+    this.name = name;
+    this.price = price;
+}
+const sandwich2 = new Food2('Kanapka2', 12)
+
+Food2.prototype.showMeal2 = function(){
+    console.log(`${this.name} kosztuje ${this.price}zł`)
+}
+sandwich2.showMeal2()
+            </pre>
+            </div>
+            <p><strong>EXTENDS & SUPER czyli dziedziczenie w klasach</strong></p>
+            <p>Extennds - jedna klasa dziedziczy właściwości innej klasy. </p>
+            <p>WAŻNE ZASADY: <br>
+                1. Jeśli odwołujemy się do super, super musi być na samej górze. <br>
+                2. Kolejność warunków w konstruktorze musi być taka sama jak w super.
+            </p>
+
+
+
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+// w tym przykładzie w klasie Driver
+//będą zawarte dane konstruktora z klasy Person
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    sayHello() {
+        console.log(`${this.name} mówi cześć`)
+    }
+}
+ 
+class Driver extends Person {
+    constructor(name, age, license) {
+        super(name, age);
+        this.license = license;
+    }
+    isDriver() {
+        console.log(`${this.name} ma ${this.age} lata i posiada prawo jazdy kategorii ${this.license}`)
+    }
+}
+
+const person1 = new Person('Arek', 32)
+
+person1.sayHello()
+
+const driver1 = new Driver('Lily', 23, 'B')
+driver1.sayHello()
+driver1.isDriver()
+</pre>
+            </div>
+
+
+
+            <h3 id='forin'>PĘTLA FOR IN</h3>
+            <p>pętla przelatuje po wszyskich kluczach objektu</p>
+            <p>tworzymy tak:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">for (const nazwa_zmiennej in nazwa_objektu){}</pre>
+                </div>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+    const user = {
+        name: 'Klaudia',
+        age: 32,
+        sex: 'female',
+        'hair-color': 'blonde'
+    };
+    
+    for (const data in user) {
+        console.log(data)
+    }
+
+    //konsola wyloguje
+    //name
+    //age
+    //sex
+    //hair-color
+
+    for (const data in user) {
+        console.log(user[data])
+    }
+    //konsola wyloguje
+    //Klaudia
+    //32
+    //female
+    //blonde
+</pre>
+                </div>
+            </p>
+            <h3 id='this'>this</h3>
+            <a href="https://typeofweb.com/this-js-kontekst-wywolania-funkcji/" target="_blank">this w JS — czyli kilka
+                słów o
+                kontekście wywołania funkcji</a>
+
+            <p>this wskazuje na obiekt na którym został wywołany </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">function test() {
+    console.log(this.name)
+}
+
+const obj1 = {
+    name: 'Kris',
+    test: test
+};
+const obj2 = {
+    name: 'Adam',
+    test: test
+};
+
+obj1.test();
+obj2.test();</pre>
+            </div>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+function food (name){
+    this.name = name;
+};
+
+const zupa = new food('pomidorowa');
+const drugieDanie = new food('schabowy');
+
+console.log(zupa)
+console.log(drugieDanie)
+</pre>
+            </div>
+            <h3 id='thisAndFuncArrow'>THIS i FUNKCJA STRZAŁKOWA</h3>
+            <a href="https://www.udemy.com/course/javascript-jedyny-kurs-ktorego-potrzebujesz/learn/lecture/16507120?start=525#content"
+                target="_blank">Link
+                do lekcji na Udemy</a>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">const ob = {
+name: 'Nadia',
+callName() {
+console.log(this);
+
+function callNameAgain() {
+console.log(this)
+};
+callNameAgain()
+callNameAgain.bind(ob)()
+
+
+const callAgain = () => console.log(this)
+callAgain()
+},
+testfn: () => {
+console.log(this);
+}
+}
+
+ob.callName()
+ob.testfn()
+
+//callName wyloguje obiekt ob
+//bo this wskazuje na ob
+
+//callNameAgain wyloguje  window
+//w tej fukncji this nie jest powiązany z obiekgtem
+//i nawiazuję bezpośredni do windows
+
+//callNameAgain.bind(ob)() wyloguje obiekt ob
+//bo bindujemy ob
+
+//callAgain wyloguje obiekt ob
+//tak działa funkcja strzałkowa z this
+//nie trzeba bindować bo wskazuje bezposrednio na obiekt
+
+//testfn wyloguje window 
+//choć jest to funkcja strzałkowa to wyloguje window
+//bo this wskazuje na to gdzie jest funkcja wywołna
+</pre>
+            </div>
+            <img src="media/img2541.jpg" alt="">
+            <h3 id='call'>CALL</h3>
+            Call to jest taka metoda która odwołuje się do jakiejś funkcji która ma w sobie obiekt. <br>
+            funkcja.call(OBIEKT, ARGUMENTY) można wywoływać bez podawania argumentów
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+    const movie = {
+        title: 'Avengers'
+    }
+    const showMovie = function (price, cinema){
+        console.log(`Film: "${this.title}", bilet: ${price}zł, kino: ${cinema}`)
+    }
+    showMovie.call(movie, (22, "CinemaCity"))
+</pre>
+            </div>
+            <br>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+function Movie(title, year) {
+    this.title = title;
+    this.year = year;
+};
+
+function ActionMovie(title, year) {
+    Movie.call(this, title, year);
+    this.category = 'Akcja';
+
+    console.log(`${this.title}, rok: ${this.year}, kategoria: ${this.category}`);
+}
+
+function Comedy(title, year) {
+    Movie.call(this, title, year);
+    this.category = 'Komedia';
+
+    console.log(`${this.title}, rok: ${this.year}, kategoria: ${this.category}`);
+}
+
+const newMovie = new ActionMovie('F&F', 2001);
+const newMovie2 = new Comedy('Snatch', 2000);
+</pre>
+            </div>
+
+
+            <h3 id='apply'>APPLY</h3>
+            <p>Działa tak jak call tylko zamiast argumentów przyjmuje tablice. Nie musimy się odwoływać do konkretnego
+                obiektu. Zamiast obiektu możemy użyć null
+            </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+funkcja.apply(nazwa_obiektu, [tablica])
+funkcja.apply(null, [tablica])
+</pre>
+            </div>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+function add(...args) {
+    let result = 0;
+    for (let i = 0; i < args.length; i++) {
+       result += args[i]
+       }
+    return result;
+}
+    
+const score = add.apply(null, [1, 2, 3, 4, 5, 6])
+    
+console.log(score)
+</pre>
+            </div>
+
+            <h3 id='bind'>BIND</h3>
+            <p>Jest to kolejna bardzo podobna (do call i apply) w działaniu funkcja. Kluczową różnicą jest to, że użycie
+                bind() nie wywołuje funkcji a jedynie zwraca ją z nowo przypisanym this.
+
+            </p>
+            <p>Bind działa z fukcjami i wyrażeniami funkcyjnymi, nie działa z fukcjmai strzałkowymi</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const car1 = {
+    name : 'Ferrari'
+};
+
+const car2 = {
+    name:'Audi',
+    year: 2005
+};
+
+const car3 = {
+    name:'Nissan'
+};
+
+function  showName(){
+    console.log(this.year)
+}
+showName.bind(car2)()</pre>
+            </div>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const colorsObj = {
+    colors: ['red', 'green', 'blue'],
+    showColors() {
+        this.colors.forEach(function (el, i) {
+            console.log(this.colors[i])
+        }.bind(this))
+    }
+}
+colorsObj.showColors();
+</pre>
+            </div>
+            <h3 id='summary'>Podsumowanie this,call,apply,bind</h3>
+            <a href="https://www.udemy.com/course/javascript-jedyny-kurs-ktorego-potrzebujesz/learn/lecture/16507128#content"
+                target="_blank">Link
+                do filmu Udemy</a>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+// 'use strict'
+
+console.log(this === window) //true
+console.log(this.a === window.a) //true
+
+//========================================
+
+function add(c, d) {
+    console.log(this.a + this.b + c + d);
+}
+add(5, 4) // NaN
+
+//========================================
+
+function add(c, d) {
+    return this.a + this.b + c + d;
+}
+add(5, 4) // NaN
+const numbers = {
+    a: 1,
+    b: 7
+}
+console.log(add.call(numbers, 3,9)) // 20
+console.log(add.apply(numbers, [7, -5]))  //10
+
+//========================================
+
+const user = {
+    name : 'Lily'
+}
+const showUser = ()=> console.log(this.name)
+
+showUser.bind(user)() //niec nie wyloguje(puste pole)
+//wyloguje puste, bo funkcja strzałkowa ma swojego thisa 
+//na funkcji strzaowej binda nie używamy
+
+const showUser2 = function (){
+    console.log(this.name)
+}
+showUser2.bind(user)() //Lily
+
+function showuser3 (){
+    console.log(this.name)
+}
+showuser3.bind(user)() //Lily
+
+//bind działa z fukcjami i wyrażeniami funkcyjnymi
+//nie działa z fukcjmai strzałkowymi
+
+
+        </pre>
+            </div>
+            <h3 id="objAss">OBJECT.ASSIGN()</h3>
+            <p>służy do łączenia objectów i tworzyć z nich inny. Najczęsciej przydaje się do kopiowania jakiegoś obiektu
+            </p>
+            <p>tworzenie <br>
+                const newObject = Object.assign(object1, object2) <br>lub <br>
+                const newObject = Object.assign({},object1, object2) <br>
+                jako pierwszy element podajemy pusty object wtedy object 2 niedapisze nam object2 jesli byłyby te same
+                właściwości
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+const user = {
+    name : 'Lily',
+    age: 23
+}
+const pet={
+    name: 'Drops',
+    type: 'dog'
+}
+
+const newObject = Object.assign(user, pet)
+
+console.log(pet)
+console.log(user)
+console.log(newObject)
+            </pre>
+                </div>
+            </p>
+
+            <h3 id="getAndSet">GETTERS & SETTERS</h3>
+            <a href="http://kursjs.pl/kurs/obiekty/obiekty-enkapsulacja.php#setter-getter" target="_blank">kursjs.pl</a>
+            <p></p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const city={
+    name: 'New York',
+    loaction: 'USA',
+
+    get cityName(){
+        return this.name
+    },
+    set cityName(newCity){
+        return this.name = newCity;
+
+    }
+}
+
+console.log(city.cityName)
+
+const newCity = city.cityName = 'LA'
+console.log(city.cityName)                </pre>
+            </div>
+            <h3 id="destructuring">DESTRUKTURYZACJA</h3>
+            <p>Destrukturyzować możemy obiekty, ale również tablice.</p>
+            <p>Tworzymy ją tak <br>
+                const {klucz / klucze} = obiekt</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const user = {
+    name:'Lily',
+    age: 23,
+    job: 'DJ',
+    car:{
+        brand: 'Dodge',
+        model: 'Viper'
+    }
+};
+
+//w funkcji abouitMe detrukturyzujemy obiekt user 
+//i możemy tak odwołuywac się do kluczy
+let aboutMe = ()=>{
+    const{name, age, job} = user;
+    console.log(`${name} ma ${age} lata i pracuje jako ${job}`);
+}
+aboutMe()                    
+          
+//bez destrukryzacji tak byśmy się odwoływali
+aboutMe = ()=>{
+    console.log(`${user.name} ma ${user.age} lata i pracuje jako ${user.job}`);
+}
+aboutMe()
+
+
+//inny sposób na destrukryzacje
+aboutMe = (info)=>{
+    const{name, age, job} = info;
+    console.log(`${name} ma ${age} lata i pracuje jako ${job}`);
+}
+aboutMe(user)   ]
+
+let aboutMe2 = ({car:{brand, model}}) => {
+    console.log(`Jej samochód to: ${brand} ${model}`);
+}
+aboutMe2(user)
+
+
+      </pre>
+            </div>
+
+
+        </section>
+        <section id="operators">
+            <h2>OPERATORY</h2> <a href="http://kursjs.pl/kurs/super-podstawy/operatory.php" target="_blank">MDN</a>
+
+
+            <h3 id="arithmetic">OPERATORY ARYTMETYCZNE.</h3>
+            <p> Gdy napiszesz <strong>4 + 5</strong>, znak <strong>+</strong> to właśnie operator, a <strong>4</strong>
+                i
+                <strong>5</strong> to tak zwane operandy.
+            </p>
+            <p>
+                Większość z nich znamy z matematyki, dlatego dział ten będzie dość skrótowy.
+            </p>
+            <p>Poniżej zamieszczam przykłady dla <strong>y = 5</strong></p>
+
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Nazwa działania</th>
+                    <th>Równanie</th>
+                    <th colspan="2">Wynik</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Dodawanie</td>
+                    <td>x = y + 2</td>
+                    <td>y = 5</td>
+                    <td>x = 7</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Odejmowanie</td>
+                    <td>x = y - 2</td>
+                    <td>y = 5</td>
+                    <td>x = 3</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Mnożenie</td>
+                    <td>x = y * 2</td>
+                    <td>y = 5</td>
+                    <td>x = 10</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Dzielenie</td>
+                    <td>x = y / 2</td>
+                    <td>y = 5</td>
+                    <td>x = 2.5</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulo czyli reszta z dzielenia</td>
+                    <td>x = y % 2</td>
+                    <td>y = 5</td>
+                    <td>x = 1</td>
+                </tr>
+                <tr>
+                    <td>**</td>
+                    <td>Potęgowanie (eksperymentalna
+                    </td>
+                    <td>x = y ** y</td>
+                    <td>y = 5</td>
+                    <td>x = 3125</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>nie stosujemy w projektach dla klienta)
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">++</td>
+                    <td rowspan="2">Inkrementacja (dodaj jeden)</td>
+                    <td>x = ++y</td>
+                    <td>y = 6</td>
+                    <td>x = 6</td>
+                </tr>
+                <tr>
+                    <td>x = y++</td>
+                    <td>y = 6</td>
+                    <td>x = 5</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">--</td>
+                    <td rowspan="2">Dekrementacja (odejmij jeden)</td>
+                    <td>x = --y</td>
+                    <td>y = 4</td>
+                    <td>x = 4</td>
+                </tr>
+                <tr>
+                    <td>x = y--</td>
+                    <td>y = 4</td>
+                    <td>x = 5</td>
+                </tr>
+            </table>
+
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+//dla x = 5;
+console.log(x + 2); //7
+console.log(x - 1); //4
+console.log(x * 3); //15
+console.log(x / 2); //2.5
+console.log(x % 2); //1
+console.log(x**3); //125
+        </pre>
+            </div>
+
+            <p>Zwróć uwagę na operator inkrementacji, który może występować przed zmienną lub po zmiennej.</p>
+
+            <p>Gdy występuje przed zmienną, zwiększenie jej wartości nastąpi w danej instrukcji.
+                Jeżeli występuje po zmiennej, zwiększona wartość wystąpi dopiero w kolejnej instrukcji.</p>
+
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const x = 5;
+console.log(x--); //5
+console.log(x); //4
+
+const y = 5;
+if (y-- "znak mniejszosci" 5) { //nwypisze się } </pre>
+            </div>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const x = 5;
+console.log(--x); //4
+console.log(x); //4
+
+const y = 5;
+if (--y "znak mniejszosci" 5) { //wypissię } </pre>
+            </div>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const x = 24;
+
+if (x % 2 === 0) {
+console.log("Liczba parzysta");
+}
+        </pre>
+            </div>
+
+
+            <!-- ### -->
+            <h3 id="assignment">Operatory Przypisania</h3>
+            <p>
+                Czyli operatory, które służą do przypisania do zmiennej jakiejś wartości, pola, obiektu itp.<br>
+                Poniżej zamieszczamy przykłady dla <strong>x = 10</strong> i <strong> y = 5</strong>:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Przykład</th>
+                    <th>Równoznaczne z</th>
+                    <th>Wynik</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>x = y</td>
+                    <td>x = y</td>
+                    <td>x = 5</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>x += y</td>
+                    <td>x = x + y</td>
+                    <td>x = 15</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>x -= y</td>
+                    <td>x = x - y</td>
+                    <td>x = 5</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>x *= y</td>
+                    <td>x = x * y</td>
+                    <td>x = 50</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>x /= y</td>
+                    <td>x = x / y</td>
+                    <td>x = 2</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>x %= y</td>
+                    <td>x = x % y</td>
+                    <td>x = 0</td>
+                </tr>
+            </table>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+let myVar = "Przykładowy tekst";
+myVar += " który nie";
+myVar += " zmieścił by się w jednlinijce";
+
+let x = 10;
+x += 5; //15
+        </pre>
+            </div>
+
+            <!-- ### -->
+            <h3 id="comparison">Operatory Porównania</h3>
+            <p>
+                Operatory logiczne stosuje się w instrukcjach warunkowych.
+                Służą one do porównywania lewej strony równania do prawej, w wyniku której zawsze zwracana jest
+                true/false.
+            </p>
+
+            <p>Poniżej zamieszczam przykłady dla <strong>x = 5</strong></p>
+
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Opis</th>
+                    <th>Równanie</th>
+                    <th>Zwróci</th>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>równe</td>
+                    <td>x == 8</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>różne</td>
+                    <td>x != 8</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">===</td>
+                    <td rowspan="2">równa wartość i taki sam typ danych<span>W naszym przykładzie x to numer,
+                            a 5 po prawej stronie jest tekstem</span></td>
+                    <td>x === 5</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>x === "5"</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">!==</td>
+                    <td rowspan="2">różne wartości lub różny typ danych<span>W naszym przykładzie x to numer,
+                            a 5 po prawej stronie jest tekstem</span></td>
+                    <td>x !== "5"</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>x !== 5</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>większe od</td>
+                    <td>x &gt; 8</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>mniejsze od</td>
+                    <td>x &lt; 8</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>większe bądź równe od</td>
+                    <td>x &gt;= 8</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>mniejsze bądź równe od</td>
+                    <td>x &lt;= 8</td>
+                    <td>true</td>
+                </tr>
+            </table>
+
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const myVar = 8;
+
+if (myVar === 10) {
+//ten kawałek kodu się nie wykona
+}
+
+if (myVar "znak mniejszości"= 10) {
+//ten kawałek kodu się wykona } if (myVar !==8) {
+//ten kawałek kodu się nie wykona }
+</pre>
+            </div>
+            </p>
+
+            <!-- ### -->
+            <h3 id="logical">Operatory Logiczne</h3>
+            <p>
+                Są one także stosowane w instrukcjach warunkowych. Za ich pomocą możemy łączyć kilka
+                porównań w jedną
+                całość. Poniżej przykłady
+                dla <strong>x = 6</strong> i <strong>y = 3</strong>:
+            </p>
+
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Opis</th>
+                    <th style="width:150px">Przykład</th>
+                    <th>Wynik</th>
+                </tr>
+                <tr>
+                    <td>&amp;&amp;</td>
+                    <td>and (i)</td>
+                    <td>(x &lt; 10 &amp;&amp; y &gt; 1)</td>
+                    <td>Prawda, bo x jest mniejsze od 10 <strong>i</strong> y jest większe od 1</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>or (lub)</td>
+                    <td>(x &gt; 8 || y &gt; 1)</td>
+                    <td>Prawda, bo x nie jest większe od 8, ale y jest większe od 1</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                    <td>xor (jeden z, ale nie dwa równocześnie)</td>
+                    <td>(x === 6 ^ y === 3)</td>
+                    <td>Fałsz, bo obydwa są prawdziwe</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>not (negacja)</td>
+                    <td>!(x === y)</td>
+                    <td>Prawda, bo negujemy to, że x === y</td>
+                </tr>
+            </table>
+
+
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+const myVar = 8;
+const myVar2 =
+if (myVar === 8 && myVar2 === 10) {
+//ten kawałek kodu się nie wykona bo mamy "i",
+muszą być spełnione, a nie są
+
+if (myVar === 8 || myVar2 === 8) {
+//ten kawałek się wykona bo mamy "lub" - jedwarunków jest poprawny
+
+if (myVar === 8 ^ myVar2 === 15) {
+//ten kawałek się nie wykona bo mamy "xor", a obspełnione
+
+if (!(myVar === 8)) {
+//ten kawałek się nie wykona, bo mamy negację!
+//powyższy warunek jest jednoznaczny z myVar !== 8
+
+if ((myVar === 2) || 1) {
+//ten kawałek zawsze się wykona, bo myVar nie jest 2,
+//ale drugi fragment warunku zawsze zwróci trujest rzutowana na true)
+}</pre>
+            </div>
+
+        </section>
+        <section>
+            <h2 id="conditional-statements">INSTRUKCJE WARUNKOWE</h2>
+
+            <h3 id="if_else">IF ELSE - jeżeli to </h3>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">example:
+const nr = 3;
+if (nr > 20) { //jeżeli...
+console.log("Liczba jest większa od 20");
+} else { //w przeciwnym razie...
+console.log("Liczba jest mniejsza od 20");
+}</pre>
+            </div>
+
+            <h3 id="else_if">ELSE IF - jeżeli to lub to ...</h3>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">//ELSE IF
+//będzie sprawdzać czy hasło jest dobre
+//jeśli ma 10 i więcej znaków to mocna hasło
+//jeśli 5-10 to słabe hasło
+// jeśli mniej niż 5 to hasło nie do przyjęcia
+let numLetterInPass = 14;
+if (numLetterInPass > 10) {
+console.log('Mocne hasło');
+} else if (numLetterInPass >= 5 && numLetterInPass "znak_mniejszości"= 10) {
+console.log('Słabe hasło');
+}else if (numLetterInPass "znak_mniejszości" 0) {console.log(`nie ma takiej opcji`)}
+
+ else 
+console.log('Hasło ma za mało znaków');
+            }</pre>
+            </div>
+
+            <h3 id="switch">SWITCH</h3>
+            <p> działą podobnie jak else if</p>
+            <p>w switchu uzywamy stringow i numberow</p>
+            <p>tworzymy ja tak
+
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+switch (wyrazenie) {
+    case przypadek1:
+        instrukcjaGdyPrzypadek1
+    break;
+    case przypadek2:
+        instrukcjaGdyPrzypadek2
+    break;
+    default:
+        instrukcjaGdyBrakDopasowanegoPrzypadku
+}</pre>
+                </div>
+
+            </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+            //PRZYKŁAD
+const day = 'środa'
+switch (day) { //sprawdza czy day jest
+case 'poniedziałek': //jesli jest
+console.log('Dziś jest poniedziałek') to wykonuje
+break; //jesli nie to break czyprzełącza na następny case az do skutku
+case 'wtorek':
+console.log('Dziś jest wtorek')
+break;
+case 'środa':
+console.log('Dziś jest środa')
+break;
+case 'czwartek':
+console.log('Dziś jest czwartek')
+break;
+case 'piątek':
+console.log('Dziś jest piątek')
+break;
+case 'sobota':
+console.log('Dziś jest sobota')
+break;
+case 'niedziela':
+console.log('Dziś jest niedziela')
+break;
+
+default: //jeśli żadna z powyższych nzostanie znaleziopna to wykonaj break
+console.log('NIE MA TAKIEGO DNIA ZIOME
+}
+        </pre>
+            </div>
+            <h3 id="conditional"> OPERATOR WARUNKOWY/ trójargumentowy/ tójwarunkowy </h3>
+            <p>(to jest taka skrocona wersja if) </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">zmienna = (warunek) ? TRUE : FALSE;</pre>
+            </div>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">let x = 8
+let text;
+text = (x >= 10 && x "znak_mniejszości"= 10)
+ ? 'równe 10' : 'nie równe 10' ; console.log(text);</pre>
+            </div>
+        </section>
+        <section id="loops">
+            <h2>PĘTLE</h2>
+            <a href="http://kursjs.pl/kurs/super-podstawy/petle.php" target="_blank">SUPER OPIS na kursjs.pl</a>
+            <p>Pętle tworzymy tak jak instrukcje np for(){}</p>
+            <h3 id="for">Pętla FOR</h3>
+            <p>tworzenie pętli for
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">for (zainicjowanie_zmiennych; warunek_kończący_wykonywa
+        nie_pętli; zmiana_zmiennych) { <br> kod który zostaniewykonany pewną ilość razy }</pre>
+                </div>
+
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">example:for (let i = 0; i"znak_mniejszości"5; i++){}</pre>
+                </div>
+            </p>
+            <h3 id="while">Pętla WHILE</h3>
+            <p>pętla while wykonuje się tak długo dopóki jakiś warunek nie zostanie spełniony</p>
+            <p>tworzenie pętli while
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide"> while (warunek_kończący_wykonywanie_pętli) { instrykcje }</pre>
+                </div>
+                example:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">let i = 0;
+while (i"znak_mniejszości"5{
+    consol.log(i)
+    i++
+}</pre>
+                </div>
+            </p>
+            <h3 id="do_while">Pętla DO...WHILE</h3>
+            <p>pętla while wykonuje się tak długo dopóki jakiś warunek nie zostanie spełniony. Wykonuje są przynajmniej
+                raz.
+                (jest taka jakby while od konca</p>
+            <p>tworzenie pętli do..while
+
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">do
+    {polecenia}
+while (warunek_kończący_wykonywanie_pętli)</pre>
+                </div>
+                example:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">do{
+    i++;
+    console.log(`I po iteracji ${i}`);
+}
+while (i"znak_mniejszości"5{
+}</pre>
+                </div>
+
+            </p>
+            <h3 id="for_of">Pętla FOR OF</h3>
+            <p>do pracy na tablicach</p>
+            <p>dobrze zeby nazwa zmiennej odnosiła się do nazwy tablicy (np .numbers->number lub fruits->fruit)</p>
+            <p>trzeba uważać!!! bardzo ważne żeby używać słowa kluczowego (let/const) przy deklarowaniu zmiennej w petli
+                for
+                of
+                aby nie wpakować zmiennej jako globalnej</p>
+            <p>tworzenie pętli for of
+
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+let/const nazwa tablicy = []
+for (let/const nazwa_zmiennej of nazwa tablicy){
+    polecenia
+}
+</pre>
+                </div>
+                example:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+let numbers = [1,2,3,4,5]
+for (const number of numbers){
+    console.log(number *2)
+}</pre>
+                </div>
+
+            </p>
+            <h3 id="for_in">Pętla FOR IN</h3>
+            <p>do pracy na obiektach</p>
+
+            <p>tworzenie pętli for in
+
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide"></pre>
+                </div>
+                example:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide"></pre>
+                </div>
+
+            </p>
+            <h3 id="for_each">Pętla FOREACH</h3>
+            <p>Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy. Oczywiście możesz to samo zrobić za
+                pomocą
+                for,
+                ale forEach wygląda bardziej intuicyjnie.</p>
+            <p>do petli foreach musimy dostać się za pomocą funkcji</p>
+            <p>tworzenie pętli foreach
+
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+nazwa_tablicy.forEach(funkcja_callback[, thisArg])
+</pre>
+                </div>
+                example:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">
+const numbers = [1, 2, 3, 4, 5];
+const newNumbers = numbers.forEach(el => console.log(el*2));</pre>
+                </div>
+                instrukcja do przykłądu dla każdego elementu tablicy numbers (el) ma wykonać się jakaś funkcja
+                (clg(el*2)) czyli kazdy elelemnt zostanie pomnozopny razy 2 i wylogowany w konsoli (element pod element
+                el
+                podklada sie element z tablicy numbers, wykonuje się funcja i tak dla kazdego elememntu tablicy)
+            </p>
+        </section>
+        <section id="arrays">
+            <h2>TABLICE</h2>
+            <p>w tablicy możemy przechowywać wszystkie typy zmiennych</p>
+            <p>tablicę tworzymy poprzez let/const np:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">let arr = []</pre>
+                </div>lub poprzez konstruktor new i słowo kluczowe array
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">const arr = new Array(5)</pre>
+                </div> stworzyliśmy w ten sposób pustą pięcioelementową
+                tablicę
+            </p>
+            <p>w tablicach indexy (ID) liczą się od 0, czyli pierwszy elem w tabvlicy ma ID=0, a np 4 elem ma ID=3 <br>
+                żeby odwołać się do konkretnego elementu z tablicy (np 4) wpiszemy nazwa_tablicy[3]</p>
+            <p>mamy metody destrukcyjne i niedestrukcyjne. destrukcyjne zmieniaja zawartosc tablicy (np shift, unshift,
+                pop,
+                push), a niedestukcyjne nie zmieniaja zawartosci tablicy tylko wykorzystuja ja i tworza nowa zmienna (np
+                map)
+            </p>
+            <p>METODY NA TABLICACH <a
+                    href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array"
+                    target="_blank">MDN</a>
+                <a href="http://kursjs.pl/kurs/super-podstawy/tablice.php" target="_blank">KURSJS</a> </p>
+            <ol>
+                <li>UNSHIFT</li>
+                <p>Dodaje jeden lub więcej elementów na początek tablicy i zwraca jej nową długość.</p>
+                <li>SHIFT</li>
+                <p>Usuwa pierwszy element z tablicy i zwraca go. Metoda ta zmienia długość tablicy.</p>
+                <li>PUSH</li>
+                <p>Dodaje jeden lub więcej elementów na koniec tablicy i zwraca jej nową długość. Metoda ta zmienia
+                    długość
+                    tablicy.</p>
+                <li>POP</li>
+                <p>Usuwa ostatni element z tablicy zwracając go. Metoda ta zmienia długość tablicy.</p>
+                <li>MAP</li>
+                <p>tworzy nową tablicę zawierającą wyniki wywoływania podanej funkcji dla każdego elementu wywołującej
+                    tablicy.
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">let strings = ["hello", "Array", "WORLD"];
+
+function makeUpperCase(v)
+{
+    return v.toUpperCase();
+}
+
+let uppers = strings.map(makeUpperCase);
+
+// uppers są teraz pisane wielkimi literami ["HELLO", "ARRAY", "WORLD"]
+// strings są niezmienione</pre>
+                    </div>
+                </p>
+                <li>CONCAT</li>
+                <p>Zwraca nową tablicę złożoną z tablicy, na której wywołano tę metodę, połączonej z innymi podanymi
+                    tablicami
+                    lub wartościami.</p>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide"><b>Przykład: Połączenie dwóch tablic</b> 
+
+alpha = new Array("a", "b", "c");
+numeric = new Array(1, 2, 3);
+alphaNumeric = alpha.concat(numeric); 
+// tworzy tablicę ["a", "b", "c", 1, 2, 3]</pre>
+                </div>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide"><b>Przykład: Połączenie trzech tablic</b>
+
+num1 = [1, 2, 3];
+num2 = [4, 5, 6];
+num3 = [7, 8, 9];
+nums = num1.concat(num2,num3) 
+// tworzy tablicę [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
+                </div>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide"><b>Przykład: Połączenie wartości z tablicą</b> 
+
+alpha = ['a', 'b', 'c'];
+alphaNumeric = alpha.concat(1, 2, 3);
+// tworzy tablicę ["a", "b", "c", 1, 2, 3]</pre>
+                </div>
+                <li>SPREAD & REST OPERATOR</li>
+                <ul>
+                    <li>
+                        <p>Operator spread zapisujemy jako "...". Wyjmuje on wszystkie eleementy tablicy i wypisuje jako
+                            elementy.
+                            Możożemy dzieki nie mu rowniez tworzyc inne tablice połączone z kilku
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">let drinks = ['mleko', 'woda', 'sok'];
+let meals = ['chleb', 'mięso', 'frytki'];
+                
+console.log(...drinks),
+// konsola wyloguje taki tekst - mleko woda sok
+                
+console.log(...drinks, ...meals);
+// konsola wyloguje taki tekst - mleko woda sok chleb mięso frytki
+                
+let newArr = [...drinks, ...meals];
+// utworzono nową tablicę newArr
+//["mleko", "woda", "sok", "chleb", "mięso", "frytki"]
+
+</pre>
+                            </div>
+                    </li>
+                    <li>Operator rest - działa odwrotnie czyli z jakiegoś elementu tworzy tablicę. tez zapisujemy "..."
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">function numbers(x, y, ...z) {
+    console.log(x, y, z)
+    };
+numbers(43,31,57,32,244, 12)
+// taka funkcja wylodguje 43, 31 i tablicę pozostałymi elementami
+//43 31 
+// Array(4) [ 57, 32, 244, 12 ]
+
+
+//gdyśmy nie zastosowali spread to wylogowały by  się 
+//tylko 3 pierwsze elememty (43 31 57)
+
+function numbers(x, y, z) {
+    console.log(x, y, z)
+};
+numbers(43,31,57,32,244, 12)</pre>
+                        </div>
+                    </li>
+                </ul>
+
+                </p>
+                <li>SLICE (niedestrukcyjna)</li>
+                <p>Wydobywa fragment tablicy i zwraca go jako nową tablicę.
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">arr.slice([begin[, end]])</pre>
+                    </div>
+                    <p><b>begin </b> <br>
+                        Indeks (liczony od zera) od którego zaczyna się wydobywanie. <br>
+                        Jeżeli indeks jest ujemny, begin wskazuje przesunięcie w kolejności od końca. slice(-2) wydobywa
+                        kolejno
+                        drugi od końca i ostatni element tablicy. <br>
+                        <b>end</b> <br>
+                        Indeks (liczony od zera) przed którym kończy się wydobywanie. slice wydobywa elementy jednakże
+                        nie
+                        zawiera end. <br>
+                        slice(1,4) wydobywa elementy od drugiego do czwartego (o indeksach 1, 2 i 3). <br>
+                        Jeżeli parametr ten ma wartość ujemną to end określa odległość od końca tablicy. slice(2,-1)
+                        wydobywa
+                        kolejne elementy od trzeciego do przedostatniego. <br>
+                        Jeżeli end jest pominięty, slice wydobywa wszystkie elementy do końca tablicy.</p>
+                    example:
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide"></pre>
+                    </div>
+                </p>
+
+                <li>SPLICE (destrukcyjna)</li>
+                <p>Zmienia zawartość tablicy, dodając nowe elementy podczas usuwania starych elementów. Z wyciętych
+                    elementów
+                    tworzymy nową tablicę.
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre
+                            class="example hide">array.splice(element od którego wycinamy (włącznie), <br> ilość usuwanych elementów[dodawane elementy i/lub tablice)</pre>
+                    </div>
+                    examples:
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">
+let myFish = ["anioł", "klaun", "mandarynka", "jesiotr"];
+        
+let removed = myFish.splice(2, 0, "bęben");
+//po drugim elemencie usuwamy jeden element i dodajemy element (bęben)
+//tablica wygląda tak ["anioł","klaun","bęben","mandarynka","jesiotr"]       
+
+removed = myFish.splice(3, 1)
+//po 3 elemencie usuwamy jeden element (mandarynka)
+//tablica wygląda tak [["anioł", "klaun", "bęben, "jesiotr"]
+
+removed = myFish.splice(2, 1, "trąba")
+//po drugim elemencie usuwamy jeden element (bęben) <br>i w tym miejscu dodajemy elememnt "trąba" <br> czyli jakby podmieniamy bęben na trąba
+//tablica wygląda tak [ "anioł", "klaun", "trąba", "jesiotr" ]
+
+removed = myFish.splice(0, 2, "papuga", "zawilec", "niebieski")
+//usuwamy elementy do drugiego 2 (anioł i klaun) i w tym <br> miejscu dodajemy trzy elementy (papuga, zawilec, niebieski)
+//tablica wygląda tak <br> ["papuga","zawilec","niebieski","trąba","jesiotr"]
+
+removed = myFish.splice(3)
+//usuwa  elementy wszystkie elementy od trzeciego
+//tablica wygląda tak[ "papuga", "zawilec", "niebieski" ]
+
+removed = myFish.splice(1,0,['kaczka', 'barka'])
+//po 1 elemencie nic nie usuwamy i dodajemy tablicę z elememntami <br> kaczka i barka
+
+// finalnie mamy tablice z elementami <br> ["papuga", ['kaczka', 'barka'],"zawilec", "niebieski"]</pre>
+                    </div>
+
+                    //tablica removed = wartość wyciętych elementów
+                </p>
+                <li>POZOSTAŁE METODY</li>
+                <ol>
+                    <li>join
+                        <p>Łączy wszystkie elementy tablicy w jeden łańcuch znaków (string). Można dodać string, który
+                            będzie
+                            odzielał wszystkie elemety tablicy tym ciągiem (jeżli zostawimy pusty to wszystkie będą
+                            połączone
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const arr = ['zielony', 'czerwony', 'niebieski'];
+console.log(arr.join(''))
+//wyloguje string 'zielonyczerwonyniebieski'
+console.log(arr.join('+'))
+//wyloguje string 'zielony+czerwony+niebieski'
+console.log(arr.join(''))
+//wyloguje string 'zielony,czerwony,niebieski'
+console.log(arr.join(','))
+//wyloguje string 'zielony,czerwony,niebieski'
+console.log(arr.join(' , '))
+//wyloguje string 'zielony , czerwony , niebieski'
+</pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>split
+                        <p>Ze strionga tworzy tablicę. Działa odwrotnie do toString i join. Można dodać wartość i jeśli
+                            taka
+                            znajdzie się w stringu wykorzysta ją, usunie i będzie dzieliła stringa na elementy
+
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const text = 'zielony +czerwony  +niebieski';
+
+console.log(text.split())
+//wyloguje  jedno elementową tablicę <br>[ "zielony czerwony  niebieski" ]
+                        
+console.log(text.split('+'))
+//wyloguje trzyelementową tablicę <br>[ "zielony ", "czerwony  ", "niebieski" ]</pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>filter
+                        <p>tworzy nową tablicę z wszystkimi elementami, które przechodzą test określony w postaci
+                            funkcji.
+                            Przyyciu jej musimy użyć funkcji (mieć callbacka)
+
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const numbers = [1, 15, 35, 2, 125, 32323,44, 286, 555];
+function number(x){
+return x%2 === 0;
+};
+console.log(numbers.filter(number))
+//wyloguje tablicę z liczbami podzielnymi przez 2 z zerową resztą
+//  number - nazwa fukncji (callback)
+    x - pod ten element będzie podłożony
+        i sprawedzony warunkiem kazdy element tablicy
+        (nie musi być x - nazwa nie ma znaczenia)
+    x%2 === 0 - warunek
+                    </pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>forEach
+                        <p>Wykonuje dostarczoną funkcję jeden raz na każdy element tablicy.
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">arr.forEach(callback[, thisArg])</pre>
+                            </div>
+                            <b>callback </b> <br>
+                            Funkcja wykonywana dla każdego elementu. <br>
+                            <b>thisArg</b> <br>
+                            Obiekt na który będzie wskazywał this, gdy wykonana zostanie funkcja zwrotna callback.
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const numbers = [1, 15, 35, 2, 125, 32323,44, 286, 555];
+const newNumbers = numbers.forEach( x => console.log(x * 2))
+// wylogowane zostanie kazdy element tablicy * 2
+// wykorzystlismy tutaj funkcje strzałkową</pre>
+                            </div>
+
+                        </p>
+                    </li>
+                    <li>includes()
+                        <p> ustala czy dana tablica posiada szukany element, zwracając true lub false. Można używać
+                            operatów
+                            logicznych.
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const numbers = [1, 5, 8, 30];
+ console.log(numbers.includes(2))
+//wyloguje false
+console.log(numbers.includes(3+2))
+//wyloguje true
+console.log(numbers.includes(1 || 3))
+//wyloguje true
+console.log(numbers.includes(1 && 3))
+//wyloguje false
+</pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>indexOf
+                        <p>Zwraca pierwszy (najmniejszy) indeks elementu w tablicy równego podanej wartości lub -1, gdy
+                            nie
+                            znaleziono takiego elementu. Mżna zadeklarować od którego indexu przeszukiwac.
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">array.indexOf(searchElement[, fromIndex = 0]);</pre>
+                            </div>
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const numbers = [1, 5, 8, 30, 42, 83, 8, 12, 399];
+console.log(numbers.indexOf(8))
+//wyloguje 2
+console.log(numbers.indexOf(42))
+//wyloguje 4
+console.log(numbers.indexOf(52))
+//wyloguje -1
+console.log(numbers.indexOf(8, 5))
+//wyloguje 6
+
+                </pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>lastIndexOf
+                        <p> Zwraca ostatni indeks, pod którym podany element może być znaleziony w tablicy, lub -1 jeśli
+                            nie
+                            jest obecny. Tablica jest przeszukiwana od końca, zaczynając od indeksu fromIndex
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const numbers = [1, 5, 8, 30, 42, 83, 8, 12, 399];
+console.log(numbers.lastIndexOf(8, 4))
+//wyloguje 2
+console.log(numbers.lastIndexOf(8))
+//wyloguje 6
+                    </pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>reverse (metoda destrukcyjna)
+                        <p>Odwraca kolejność elementów w tablicy: pierwszy staje się ostatnim, ostatni pierwszym.
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide"></pre>
+                            </div>const numbers = [1, 5, 8, 30];
+                            console.log(numbers.reverse())
+                            //wyloguje tablicę [ 30, 8, 5, 1 ]
+                        </p>
+                    </li>
+                    <li>sort
+                        <p>Sortuje elementy tablicy.</p>
+                        <p>
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">arr.sort([compareFunction])</pre>
+                            </div>
+                            <b>compareFunction</b> <br>
+                            jest nazwą funkcji porównującej elementy. Jeżeli parametr zostanie pominięty, tablica będzie
+                            posortowana w porządku leksykograficznym (alfabetycznie).
+                        </p>
+                        <p>Jeżeli compareFunction zostanie podana, elementy tablicy zostaną posortowane odpowiednio do
+                            wartości
+                            zwracanej przez funkcję porównującą. Jeżeli a oraz b są dwoma porównywanymi elementami
+                            tablicy
+                            to:
+                            <ul>
+                                <li>compareFunction(a, b) zwróci wartość mniejszą od 0 - indeks elementu a będzie
+                                    mniejszy
+                                    niż
+                                    indeks b
+                                    (logicznie a < b)</li> <li>compareFunction(a, b) zwróci 0 - pozostawia a oraz b w
+                                        niezmienionej kolejności
+                                        względem siebie, jednak w dalszym ciągu oba będą porównywane z innymi elementami
+                                        (logicznie
+                                        b=a). Uwaga: Standard ECMAscript nie gwarantuje niezmienionej kolejności (np.
+                                        Mozilla
+                                        wszystkie
+                                        wersje do 2003 roku).</li>
+                                <li>compareFunction(a, b) zwraca wartość większą od 0 - indeks elementu a
+                                    będzie większy niż indeks b (logicznie a> b)</li>
+                            </ul>
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const numbers = [1, 5, 8, 30];
+const names = ['Kris', 'Adam', 'Monika']
+
+console.log(names.sort())
+//wyloguje tablicę [ "Adam", "Kris", "Monika" ]
+
+console.log(numbers.sort())                        
+//wyloguje tablicę[ 1, 30, 5, 8 ]
+
+console.log(numbers.sort(a,b) => a - b)
+//wyloguje tabilcę [ 1, 5, 8, 30 ]
+// działanie funkcja (strzałkowej) bierze dwa parametry (a i b) <br> odejmuje je od siebie, bierzze wyniki i sortuje po kolei
+
+
+                    </pre>
+                            </div>
+                        </p>
+
+                    </li>
+                    <li>toString
+                        <p>zwraca łańcuch znaków reprezentujący daną tablicę wraz z jej elementami. Tak jak pusta metoda
+                            join
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const arr = ['zielony', 'czerwony', 'niebieski'];
+console.log(arr.toString(','))
+//zielony,czerwony,niebieski</pre>
+                            </div>
+                        </p>
+                    </li>
+                    <li>toLocaleString
+                        <p>zwraca łańcuch znaków reprezentujący wszystkie elementy w tablicy. Każdy element jest
+                            konwerterowany
+                            do łańcucha znaku za pomocą lokalnych wywołań toLocaleString. Elementy łaczone są
+                            separatorem
+                            zdefiniowanym dla lokalnego języka (np. przecinek).
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">let date = new Date()
+const arr = [3500, date];
+console.log(date)
+//wylopgujeDate Mon Apr 20 2020 23:54:57 GMT+0200 <br>(czas środkowoeuropejski letni)
+
+console.log(arr.toLocaleString())
+//wyloguje jednostkę, czas systemu uzytkownika
+3500,20.04.2020, 23:57:41
+
+console.log(arr.toLocaleString('en'))
+//wyloguje jednostke czas zdefiniowany w metodzie
+3,500,4/20/2020, 11:57:29 PM
+                    </pre>
+                            </div>
+                        </p>
+                    </li>
+                </ol>
+            </ol>
+        </section>
+
+        <section id="functions">
+            <h2>FUNKCJE</h2>
+            <ul>
+                <li>
+                    <h3>Tworzenie funkcji na 3 sposoby (skrót)</h3>
+                    <ul>
+                        <li>Funkcja zadeklarowana (imienna)
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">function nazwa_funkcji (atrybuty) {}</pre>
+                            </div>
+                        </li>
+                        <li>Wyrażenie funkcyjne (funkcja przypisana do zmiennej), może występować jako funkcja anonimowa
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const nazwa_funcji = function (argumenty) {}</pre>
+                            </div>
+                        </li>
+                        <li>Funkcja strzałkowa
+                            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                <pre class="example hide">const nazwa_funkcji = argument => {}</pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <h3 id="func1"> FUNKCJA ZADEKLAROWANA/IMIENNA</h3>
+                    <p>deklaracja funkcji:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">function nazwa_funkcji (args){};</pre>
+                        </div>
+                        funkcje wywołujemy tak
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">nzawa_funkcji ()</pre>
+                        </div>
+                    </p>
+                    <p>Funkcje wywołujemy poniżej deklaracji funkcji, żeby nie pogubić się w kodzie. Lepiej tworzyć
+                        funkcje
+                        poprzez wyrażenie funcyjne, nie dochcodzi wtedy do hoistingu (nie mozesz uzyc funcji przed linią
+                        deklaracji.)
+                        Wyrażenie fukcyjne tworzymy tak:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">const nazwa_funkcji = function(){
+    }
+nazwa_funkcji()
+        </pre>
+                        </div>
+                        example:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">function add (x, y){
+    console.log(x+y);
+};
+add(9, 4);
+            
+// wytłumaczenie:
+// funkcja add przyjmuje dwa argumenty, i wykonuje n a nich taką operację: 
+//wylogowuje sumę tych argumentów
+// wywołujemy funkcję add i podajemy wartosci pod te  argumenty
+// i w koncili otrzymujemy wynik czyli sumę 
+        </pre>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <h3 id="func2">WYRAŻENIE FUNKCYJNE I FUNKCJA ANONIMOWA </h3>
+                    <p>Deklaracja funkcji przy pomocy wyrażenia funkcyjnego nie oznacza, że funkcja musi być anonimowa.
+                        Nadal
+                        może ona posiadać swoją nazwę, która może przydać się do wywołania samej siebie czy do
+                        identyfikacji
+                        w
+                        śladzie stosu podczas debugowania kodu.</p>
+                    <p>Funkcja anonimowa czyli bez nazwy stosowana często sort(), forEach(), map() i addEventListener().
+                        Służy
+                        do wykonania jakiejs akcji bez podawania parametrow. Używane najczesciej jako takie callbacki
+                        (czyli
+                        funkcja ktorej uzywamy jako argument wewn innej funkcji).
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">const h1 = document.querySelector('h1');
+h1.addEventListener('click', function () {
+    console.log('Kliknięto mnie')
+});</pre>
+                        </div>
+                    </p>
+                </li>
+
+                <li>
+                    <h3 id="func3">FUNKCJA STRZAŁKOWA</h3>
+                    <p>Funkcje strzałkową traktujemy jako wyrażenia (trzeba do niej przypisac zmienna) </p>
+                    <p> tworzymy tak:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">const nazwa_zmiennej = () => {};</pre>
+                        </div>
+                        example:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide"> const text2 = (name) => {console.log(name)};
+text2('Ania')
+
+//a z zastosowaniem zwykłej funkcji wyglą∂ało by to tak
+
+const text = function (name) {
+    console.log(name)
+}
+text('Ania')
+</pre>
+                        </div>
+                    </p>
+                    <p>
+                        Ważne zasady:
+                        <ul>
+                            <li>Funkcja może działać bez pdoawania parametru
+                                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                    <pre class="example hide">const test = () => {console.log('Hej')}
+test()</pre>
+                                </div>
+                            </li>
+                            <li>jeżlei funkcja strzałkowa przyjmuje tylko jeden parametr to nie musimy wpisywac go w
+                                nawiasie np
+                                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                    <pre class="example hide">const test = age => {console.log(age)};
+test(243);
+                    </pre>
+                                </div>
+                            </li>
+                            <li>jeżeli funkcja wykonuje tylko jedną instrukcję to mozemy pominąc nawiasy klamrowe {}
+                                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                    <pre class="example hide">const test = age => console.log(age);
+test(243);</pre>
+                                </div>
+                            </li>
+                            <li>Jesli funkcja strzałkowa tylko coś zwraca , to nie musimy dodawać słowka return
+                                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                    <pre class="example hide">const test = (a, b) => a + b;
+
+//to to samo co 
+
+function test(a, b){
+    return a + b
+};</pre>
+                                </div>
+                            </li>
+                            <li>przykłąd stosowanie przy forEach
+                                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                                    <pre class="example hide">const testArr = ['pon', 'wt', 'śr'];
+const testArr2 = testArr.forEach(x => console.log(x));
+// zamiast zwykłej funckji anonimowej (?callbacka)
+const testArr3 = testArr.forEach(function (x){
+    console.log(x);
+})
+
+                    </pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </p>
+
+                </li>
+                <li>Domyślne parametry funkcji
+                    <p>Jeżeli funkcja wymaga podania wartości przy jej wywołaniu, a my ich nie podamy, w jej wnętrzu
+                        będą
+                        one
+                        wynosić undefined:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">console.log(hello('Adam'));
+    // wyloguje Witaj Adam, jak się masz?
+    console.log(hello())
+    //wyloguje Witaj undefined, jak się masz?</pre>
+                        </div>
+
+                        Dlatego można ustawić domyślny parametr funkcji i gdy nie podamy paramatru przy wywoływaniu
+                        funcji
+                        będzie już jakis zaimplementowany np
+
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">const hello2 = (name = `drogi użytkowniku`) => `Witaj ${name}, jak się masz?`;
+    console.log(hello2('Kris'));
+    // wyloguje Witaj Adam, jak się masz?
+    console.log(hello2())
+    //wyloguje Witaj undefined, jak się masz?</pre>
+                        </div>
+                    </p>
+                </li>
+                <li>
+                    <h3 id="func4">ZAKRESY</h3>
+                    <p>Zakresy mamy globalne i lokalne. Zmienne w zakresach globalnych najlepiej oznaczać znakiem
+                        dollara,
+                        żeby
+                        w dalszej cześci kodu wiadomo było,e to właśnioe zmienna globalna a nie lokalna.</p>
+                    <p>Zmienna zadeklarowane lokalnie, używana będzie tylko w obrębie funkcji i nie można z niej
+                        korzystać w
+                        zakresie globalnym</p>
+                    <p>Jeśli zadeklarujemy w funkcji zmienną która jest już zadeklarowanw globalnie (nawet poprzez
+                        const) to
+                        zadziała i funkcja najpierw sprawdza czy ma w swoim zakresie lokalnym taką zmienną i jej będzie
+                        używać.
+                        <p>jeżeli funkcja jest zagniezdzona w innej funkcji to korzysta ze zmiennych zadeklarowanych
+                            globalnie i
+                            lokalnie z wyższego poziomu. Jeżeli w zakresie globalnym i lokalnym wyzszego poziomu bedzie
+                            taka
+                            sama zmienna to funkcja zagniezdzona korzysta ze zmiennej loaklnej z wyzszego poziomu</p>
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">
+
+                </pre>
+                        </div>
+                    </p>
+                </li>
+                <li>CALLBACK i forEach
+                    <p>funkcja callback to jest funkcja którą wykorzystujemy jako argument w innej funkcji</p>
+                    example: przy uzyciu forEach podniesiemy sobie do potęgi drugiej wszystkie elemty tabeli
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">const numbers = [.5, 4, 'abcd'];
+const newNumbers = numbers.forEach(el => {console.log(el**2)});
+// wyloguje wyniki tj .25 16 i NaN </pre>
+                    </div>
+                    za pomocą callbacka wylogujemy elelemnty tablicy duzymi literami (całe wyrazy). Opis. tworzymy
+                    tablice,
+                    tworzymy fukcje showBigNames, a potem uzywamy jej jako CALLBACK w przy tworzeniu bigNames
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">const names = ['Adam', 'Kris', 'Monia', 'Fifi'];
+const showBigNames = (elem) => {
+    return elem.toUpperCase();
+};
+const bigNames = names.map(showBigNames);
+console.log(bigNames)
+//wyloguje [Array(4) [ "ADAM", "KRIS", "MONIA", "FIFI" ]
+
+</pre>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="api">
+            <h2>API</h2>
+            <a href="https://devszczepaniak.pl/komunikacja-z-api/">Komunikacja z API – zestawienie metod</a>
+            <p>Application Programming Interface</p>
+            <ul>
+                <li>API to nie biblioteka. To program/ aplikacja która komunikuje się z jakimś innym serwerem, wysyła do
+                    niego zapytanie i dostaje konkretną odpowiedź</li>
+                <li>biblioteka - zbiór kodu który ktoś napisał i my możemy z tego korzystać, żeby pisać tego kodu mniej.
+                    Biblioteką jest np animate.css lub slick.js</li>
+            </ul>
+            <p>Najlepiej adres przypisać do zmiennej i w fetchu lepiej podać nazwę tej zamiast podawać adres z Api.
+                Można bezpośrednio w
+                fetchu, ale najlepiej do zmiennej.</p>
+            <p>
+                <a href="https://github.com/public-apis/public-apis">LISTA DARMOWYCH(PUBLICZNYCH) API</a>
+            </p>
+            <h3 id="fetch">FETCH,THEN,CATCH</h3>
+            <p>Z API korzystamy zapisując kod tak</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">fetch(adres)
+    .then()
+    .catch()</pre>
+            </div>
+            <p>lub tak</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">fetch(adres).then().catch()</pre>
+            </div>
+            <p>Jeśli wszystko przebiegnie prawidłowo wykona się to co jest w THANie, jeśli z jakichś powodów wystąpi
+                jakiś błąd podczas pobierania API wykona się to co jest w CATCHU</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">const btn = document.querySelector('button')
+const img = document.querySelector('img')
+const url = 'https://dog.ceo/api/breeds/image/random';
+
+
+btn.addEventListener('click', function () {
+
+
+    fetch(url) //pobieramy dane z API 
+        .then(res => res.json()) //(res od response=odpowiedź) przekonwertowujemy na json i otrzymujemy prosty obiekt
+        .then(res => {
+            img.setAttribute('src', res.message) // wykonujemy
+            //jakiś kod, w tym przypadku przypisujemy do src obrazu link,
+            //który pobrany został z api i przekonwertownay do obiektu.
+            //W obiekcie jest klucz message o wartości = jakiś link. 
+            img.style.width = '300px' // wykonujemy inne akcje
+        })
+        .catch(err => console.log(err)) //wykona sie gdy pójdzie coś nie tak
+        
+    }) </pre>
+            </div>
+            <h3 id="XMLHttpRequest">XMLHttpRequest</h3>
+            <a href="http://kursjs.pl/kurs/ajax/xmlhttprequest.php" target="_blank">kursjs.pl</a>
+            <p>Obiekt XMLHttpRequest istnieje w Javascript nierozerwalnie od momentu powstania Ajax i służy do
+                nawiązywania dynamicznych połączeń XHR.
+
+                W dzisiejszych czasach mamy dla niego nowszy zamiennik w postaci Fetch i prawdopodobnie to jego będziesz
+                głównie używał, ale że między obydwoma bohaterami są pewne różnice a i na starszych przeglądarkach Fetch
+                nie będzie działał, warto zapoznać się z XMLHttpRequest, a przy okazji poznać też kilka dodatkowych
+                informacji.</p>
+            <h3 id="promise">Promise</h3>
+            <a href="https://github.com/stevekane/promise-it-wont-hurt">narzędzie do nauki obietnic</a>
+            <a href="http://kursjs.pl/kurs/ajax/promise.php#promise" target="_blank">kursjs.pl</a>
+            <a href="https://devenv.pl/obietnice-promises-podstawy-jezyka-javascript/">denenv.pl</a>
+            <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Promise"
+                target="_blank">likd o MDN</a>
+            <p>Obiekt Promise reprezentuje ewentualne zakończenie (lub porażkę) asynchronicznej operacji i jej wartości.
+            </p>
+            <p>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+
+                    <pre class="example hide">new Promise(function(resolve, reject) { ... } );
+                </pre>
+                </div>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">//tworzenie za pomnocą funckji strzałkowej
+const myFirstPromise = new Promise((resolve, reject) => {
+  // do something asynchronous which eventually calls either:
+  //
+  //   resolve(someValue); // fulfilled
+  // or
+  //   reject("failure reason"); // rejected
+});
+                    
+                </pre>
+                </div>
+                <div>
+                    <h4>Krótkie historyjki, które pomogą zrozumieć Promisy. :)</h4>
+                    <h4>Historia nr 1</h4>
+                    <p><strong>Promisa</strong> to obietnica, która przyjmuje 2 parametry:
+                        <strong>resolve</strong> &amp; <strong>reject</strong>. </p>
+                    <p><strong>Przykład:</strong> "Obiecuję, że pobiorę obrazek z serwera. " </p>
+                    <p>Przyjmijmy, że obrazek ma bardzo dużą wagę i pobiera się chwilę. Kiedy już się pobierze
+                        (czyli mamy <strong>resolve</strong>, bo pobieranie zakończone sukcesem, więc obietnica
+                        została spełniona), wykonuję to, co jest przypisane do <strong>.then</strong>. </p>
+                    <p>A co umieścimy w <strong>.then</strong> to już nasza indywidualna sprawa.</p>
+                    <h4>Historia nr 2</h4>
+                    <p><strong>Promisa / obietnica:</strong> Obiecuję Ci, że zjem ciasto. </p>
+                    <ul>
+                        <li>
+                            Jeśli jem ciasto, ale jeszcze nie skończyłem, mamy <strong>pending</strong>.
+                        </li>
+                        <li>
+                            Jeśli zjadłem ciasto, to spełniłem obietnicę, a więc mamy
+                            <strong>resolve</strong>.
+                        </li>
+                        <li>
+                            Jeśli nie zjadłem ciasta, to Cię okłamałem, więc mamy <strong>reject</strong>.
+
+                        </li>
+                    </ul>
+                    <p>Skoro spełniłem obietnicę (<strong>resolve</strong>), to teraz mogę zrobić to, co miałem
+                        zaprogramowane w <strong>.then</strong>, czyli np. napisać recenzję na temat ciasta,
+                        mogę wejść na wagę i sprawdzić, czy przytyłem, mogę poprosić Cię o przepis.</p>
+                    <p>Ale wykonam to dopiero wtedy, kiedy <strong>promisa </strong>będzie
+                        <strong>resolved</strong>, bo raczej byśmy nie chcieli, żeby ktoś zabrał się za pisanie
+                        recenzji, jeśli nie jadł naszego ciasta, prawda? :P</p>
+                    <p>Natomiast jeśli nie zjadłbym ciasta, czyli obietnica nie zostałaby spełniona
+                        (<strong>reject</strong>), to możemy przechwycić ten błąd za pomocą
+                        <strong>.catch</strong>.</p>
+                </div>
+            </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+
+                <pre class="example hide">const test = new Promise((resolve, reject) => {
+    const score = 2 + 1;
+    if (score === 2) {
+        resolve('ok')
+    } else {
+        reject('błąd')
+    };
+})
+
+test
+    .then(info => console.log(info))
+    .catch(err => console.error(err))</pre>
+            </div>
+
+            <h3 id="getPost">GET, POST, PUT, PATCH, DELETE</h3>
+            <p>POSTMAN - narzędzie do testowania API<a
+                    href="https://plawgo.pl/2019/01/22/postman-testowanie-api/">informacje nt postmana</a></p>
+            <p><strong>get - </strong>pobieranie danych z serwera<br>
+                <strong>post - </strong>wysyłanie danych na serwer<br>
+                <strong>put i patch - </strong>edycja danych <br>
+                <strong>delete - </strong>usuwa dane<br>
+                <br>
+            </p>
+            <h3 id="axios">AXIOS</h3>
+            <a href="https://github.com/axios/axios">Link do axios na githubie</a>
+
+            <p>Axios jest biblioteką stworzoną na potrzeby komunikacji z API. Za użyciem Axiosa przemawiają drobnostki,
+                które jednak w moim przekonaniu sprawiają, że korzysta się z niego o wiele wygodniej niż z Fetcha. Jedną
+                z takich drobnostek jest stworzenie osobnych metod dla każdej z metod HTTP. Metody takie jak axios.get()
+                czy axios.post() wyglądają lepiej, schludniej i są bardziej czytelne niż w Fetchu. Ponadto omijamy drugą
+                linię z przykładu wykorzystania fetch() i nie musimy korzystać z metody .json().
+                <br>
+                Inną z zalet jest możliwość ustawienia globalnej konfiguracji, takiej jak domyślny URL, nagłówki itp.
+            </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+
+                <pre class="example hide">const one = document.querySelector('.one');
+const two = document.querySelector('.two');
+const three = document.querySelector('.three');
+const url = 'https://dog.ceo/api/breeds/image/random';
+
+//pobieranie przy użyciu fetcha
+fetch(url)
+    .then(res => res.json())
+    .then(res => one.setAttribute('src', res.message))
+
+//pobieranie przy użyciu AXIOS
+axios.get(url)
+    .then(res => two.setAttribute('src', res.data.message))
+
+//pobieranie przy użyciu AXIOS (z aynciem)
+async function showImage(){
+    const response = await axios.get(url);
+    three.setAttribute('src', response.data.message);
+};
+showImage();</pre>
+            </div>
+        </section>
+
+        <section id="ajaxJson">
+            <h2>AJAX & JSON</h2>
+            <h3 id="ajax">AJAX</h3>
+            <a href="http://kursjs.pl/kurs/ajax/ajax.php" target="_blank">Asynchroniczność KURSJS.pl</a>
+            <p>Asynchronus JavaScript and XML</p>
+            <p>Służy do wysyłania i pobierania danych bez konieczności przeładowania strony</p>
+            <p>Asynchroniczny oznacza, że wiele operacji może wykonywać się równocześnie, bez potrzeby czekania na
+                zakończenie poprzedniego kodu. Dzięki temu możemy pobierać dynamicznie dane z wielu miejsc na raz, ale i
+                równocześnie możemy wiele danych wysyłać.</p>
+            <p>XML. Faktycznie - gdy powstawał Ajax, głównym formatem przesyłanych danych był XML. Problem (a w zasadzie
+                nie problem, co cecha) z tym formatem jest taki, że po pierwsze jego zapis jest dość długi, co czasami
+                może sprawić, że sama składnia będzie dłuższa od realnych danych. <a
+                    href="http://kursjs.pl/kurs/ajax/ajax.php#xml" target="_blank">LINK do wzoru XML</a> </p>
+            <p>XML działa całkiem dobrze, ale można i lepiej. Dość szybko wymyślony został inny format - JSON, który
+                bardzo uprościł prace na przesyłanych danych.</p>
+
+
+            <h3 id="json">JSON</h3>
+            <a href="https://jsonlint.com/" target="_blank">Link do validatora JSONa</a>
+            <p>Format JSON do złudzenia przypomina klasyczne obiekty w JavaScript, ale może zawierać tylko dane (nie
+                przyjmuje funkcji)</p>
+            <p>W JSONie klucze i wartości podajemy w podwówjnym cudzysłowie ("") <br>
+                nie można wstawiać komentarzy <br>
+                nie wpisujemy nic w pojedynczych cudzysłowach ('') <br>
+                po ostatniej właściwości nie piszemy przecinka</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">{
+    "catalog" : [
+        {
+            "id" : "bg101",
+            "author" : "Gambardella, Matthew",
+            "title" : "XML Developer's Guide",
+            "genre" : "Computer",
+            "price" : 44.95,
+            "description" : "An in-depth look at creating applications with XML."
+        },
+        {
+            "id" : "bg102",
+            "author" : "Ralls, Kim",
+            "title" : "Midnight Rain",
+            "genre" : "Fantasy",
+            "price" : 5.95,
+            "description" : "A former architect battles corporate zombies"
+        }
+    ]
+}</pre>
+            </div>
+        </section>
+        <section id="async">
+            <h2>ASYNC i AWAIT</h2>
+            <a href="http://kursjs.pl/kurs/ajax/async-await.php" target="_blank">kursjs.pl</a>
+            <p>Async/await to nowy sposób na zapis asynchronicznego kodu. Jest to nakładka na Promise, która ułatwia
+                pisanie nam kodu.</p>
+            <p><strong>Async</strong>
+                Słowo async postawione przed funkcją sprawia, że dana funkcja zawsze zwraca obietnicę. Nie potrzebujemy
+                tutaj dodawać żadnego dodatkowego kodu.</p>
+            <p><strong>Await</strong>
+                Słowo kluczowe await, sprawia, że JavaScript poczeka na wykonanie danej obietnicy do jej zakończenia i
+                zwrócenia przez nią wyniku. Czyli nasz asynchroniczny kod zachowa się synchronicznie</p>
+            <p>Do zapisu async możemy korzystać z try/catch zeby wyłapywać błędy</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+                    function checkAge(age) {
+    return new Promise((resolve, reject) => {
+        console.log(`Twój wiek to ${age}`);
+        if (age >= 18) {
+            resolve(`Jest ok, możesz wejść`);
+        } else {
+            reject(`Niestety jesteś za młody`);
+        }
+    });
+};
+
+function doubleCheck(ageConfirm) {
+    return new Promise((resolve, reject) => {
+        console.log(`Sprawdzę jeszcze raz.`)
+        resolve(`Faktycznie: ${ageConfirm}`)
+    })
+};
+
+
+
+//SĄ DWIE METYDY NA URUCHOMIENIE TEGO KODU
+
+
+// POPRZEZ THAN,CATCH
+checkAge(22)
+    .then(res => {
+        console.log(res +'THEN')
+        return doubleCheck(res)
+    })
+    .then(res => {
+        console.log(res +'THEN')
+    })
+    .catch(err => console.log(err +'THEN'))
+
+
+//POPRZEZ ASYNC,AWAIT
+async function checkAge2(age) {
+    try {
+        const age2 = await checkAge(age);
+        console.log(age2 +'ASYNC');
+        const dbCheck = await doubleCheck(age);
+        console.log(dbCheck +'ASYNC')
+    }catch(err){
+        console.log(err +'ASYNC')
+    }
+}
+checkAge2(40)</pre>
+            </div>
+        </section>
+        <section id="dom">
+            <a href="https://developer.mozilla.org/pl/docs/Web/API/Element" target="_blank">Zwięzłych informacje w
+                formie
+                listy dla wszystkich metod, własności i zdarzeń dostępnych dla większości elementów HTML i XML DOM.</a>
+            <h2>DOM</h2>
+
+            <p>Ducument object model. Można powiedzieć, że dom to API dla html-a. Dzięki js manipulujemy drzewem DOM,
+                żeby
+                wpływać na strukturę pliku html. DOM łączy stronę www ze skryptami lub innymi jezykami programowania</p>
+            <p>DOM reprezentuje cały nasz dokument html</p>
+            <p> Dom nie jest częścią JS, ale JS umożliwia pracę z DOMem</p>
+            <p>document zawiera się w window</p>
+
+            <h3 id="window">Window</h3>
+            <p>Obiekt globalny, najważniejszy, najwyższewgo rzęduReprezentuje okno przeglądarki. Rperezentuje wszystko.
+                Niew
+                ma nic ponad window, nic wyższewj w hierarchi.</p>
+
+
+            <h3 id="#document">Document</h3>
+            <p>document zawarty jest w obiekcie window i moze zawierac dowolna liczbe elementów.</p>
+            <a href="https://developer.mozilla.org/pl/docs/Web/API/Document" target="_blank">lista własności i metod na
+                MDN dla document
+            </a>
+
+            <h3 id='getElem'>Pobieranie elementów</h3>
+            <ul>
+                <li>getElementById - pobiera wszystkie elemety po danym ID
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">const zmienna = document.getElementByID ('nazwa_id')
+lub
+const zmienna = nazwa_zmiennej.getElementByID ('nazwa_id')
+                </pre>
+                    </div>
+                    <p>example:
+                        <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                            <pre class="example hide">const zmienna = document.getElementByID ('li')
+lub
+const zmienna = document.getElementByID ('ul li')
+                    </pre>
+                        </div>
+                    </p>
+
+                </li>
+                <li>getElementByTagName - pobiera wszystkie elemety po danym tagu</li>
+                <li>getElementByCLassName - pobiera wszystkie elemety po danej klasie</li>
+                <li>querySelector (ES6) - pobiera pierwszy element po danym "(tagu,id,klasie itd)</li>
+                <li>querySelectorAll (ES6) - pobiera wszystkie elementy danego typu</li>
+                <li>ŻYWE KOLEKCJE - jeżeli chcelibnyśmy pracowac na pobranych elememtach np na petlach to musismy
+                    korzystać
+                    z getElements bo querySelector nie będzie widział dynamicznie dodanych elelemntów przez js
+                    (querySelector widzi tylko elelemnty html)</li>
+            </ul>
+
+            <h3 id="createElem">Tworzenie elelemtów</h3>
+            <a href="http://kursjs.pl/kurs/dom/dom-tworzenie-i-usuwanie.php" target="_blank">TWORZENIE I USUWANIE
+                ELEMENTÓW
+                NA KURSJS.PL</a>
+            <ul>
+                <li>document.createElement('tag_html') - tworzy elelement html</li>
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">//tworzy elelemt ul
+const ulList = document.createElement('ul');
+//dodaje utworzony ul do body (wrzuca na koniec)
+document.body.appendChild(ulList);
+//tworzy element li
+const liItem = document.createElement('li');
+// do utworzonego tagu li dodaje tekst o trzesci "cześć"
+liItem.textContent = 'cześć';
+//dodaje utaorzony tag li do tgu ul
+ulList.appendChild(liItem);
+//tak do strony dołożyliśmy listę z jednym li z tekstem cześć</pre>
+                </div>
+                <li>innerHTML - pobiera teskt zawarty w tagu html. Ustawia lub pobiera zbiór zawartych w danym elemencie
+                    znaczników razem z ich treścią. Można zmieniac tekst w elementach lub usuwać dając pusty string. Po
+                    prostu zamieniamy teskt w danym elelemncie na nowy. Można w ten sposób wstawiać takze tagi i tworzyc
+                    strukture. </li>
+                <li>outerHTML - pobiera cały obiekt (razem z tagami html)</li>
+                <li>innerText - pobiera tekst z danego elementu aktualnie wyswietlany na ekranie </li>
+                <li>textContent - tak jak innerText pobiera zawartość tekstową (ele pobiera również elementy tekstu
+                    któ®e
+                    nie są widoczne w oknie przegladarki bo są np ukryte</li>
+            </ul>
+
+            <h3 id="delElem">Usuwanie elelemntów</h3>
+            <ul>
+                <li>remove - metoda usuwa elementy
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">const zmienna1 = document.querySelector('div')
+const zmienna2 = document.querySelector('p')
+zmienna1.remove() 
+//usunie ze strony div
+zmienna2.remove()
+// usinie ze strony paragraf
+        </pre>
+                    </div>
+                </li>
+                <li>removeChild - usuwa elementy (dzieci). Metode wykonujemy na rodzicu
+                    <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                        <pre class="example hide">const zmienna1 = document.querySelector('div')
+const zmienna2 = document.querySelector('p')
+zmienna1.removeChild(zmienna2)
+// w divie usunięto dzieci (paragrafy)
+
+//lub 
+
+document.body.removeChild(zmienna1)
+//usunęliśmy diva ze strony
+        </pre>
+                    </div>
+                </li>
+
+            </ul>
+
+            <h3 id="addEventListener">addEventListener</h3>
+            <p>nasłuchiwanie działania. Pozwala zarejestrować obserwatora zdarzeń dla określonego typu zdarzenia na
+                elemencie <br>
+                Listenera zawsze dajemy na dole kodu <br>
+                Możemy skorzystać z funkcji
+                anonimowej, choć nie jest to zalecane. <br>
+                <a href="http://kursjs.pl/kurs/events/events.php" target="_blank">Link do kursu dla superbohaterów</a>
+            </p>
+            <p>Tworzymy go tak:
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">target.addEventListener(type, listener, useCapture); </pre>
+                </div>
+            </p>
+            <p>target - nazwa zmiennej zdefiniowana wcześniej z przypisaną akcją <br> np .const target =
+                document.getElementById("button"); </p>
+
+            <p>type - Łańcuch przedstawiający typ zdarzenia do nasłuchu np 'click'
+            </p>
+            <p>listener - kod ktory ma się wykonać (np jakaś funkcja, callback)</p>
+
+            <p>useCapture - false or true (domyślnie false) - rzadzko uzywany, w wyjątkowych sytuacjach </p>
+            <p>addEventListener zawsze dajemy na dole (ponizej funkcji)</p>
+            <div>
+                <p>Lista najczęściej używanych zdarzeń</p>
+                <table class="tab">
+                    <tbody>
+                        <tr>
+                            <th>Typ zdarzenia:</th>
+                            <th>Opis:</th>
+                        </tr>
+                        <tr>
+                            <th><strong>DOMContentLoaded</strong></th>
+                            <td>odpalane, gdy DOM się załadował</td>
+                        </tr>
+                        <tr>
+                            <th><strong>click</strong></th>
+                            <td>odpalane, gdy element został kliknięty (np. input)</td>
+                        </tr>
+                        <tr>
+                            <th><strong>mouseover</strong></th>
+                            <td>odpalane, gdy kursor znalazł się na elemencie</td>
+                        </tr>
+                        <tr>
+                            <th><strong>mouseout</strong></th>
+                            <td>odpalane, gdy kursor opuścił element</td>
+                        </tr>
+                        <tr>
+                            <th><strong>mouseenter</strong></th>
+                            <td>odpalane, gdy kursor znalazł się na elemencie</td>
+                        </tr>
+                        <tr>
+                            <th><strong>mouseleave</strong></th>
+                            <td>odpalane, gdy kursor opuścił element</td>
+                        </tr>
+                        <tr>
+                            <th><strong>dblclick</strong></th>
+                            <td>odpalane, gdy podwójnie klikniemy na element (np. input)</td>
+                        </tr>
+                        <tr>
+                            <th><strong>change</strong></th>
+                            <td>odpalane, gdy opuściliśmy element, i zmienił on swoją zawartość (np. pole tekstowe), ale
+                                też
+                                na zmianę np. selekta, checkboxa itp.</td>
+                        </tr>
+                        <tr>
+                            <th><strong>submit</strong></th>
+                            <td>odpalane, gdy formularz jest wysyłany</td>
+                        </tr>
+                        <tr>
+                            <th><strong>resize</strong></th>
+                            <td>odpalane, gdy rozmiar okna przeglądarki jest zmieniany</td>
+                        </tr>
+                        <tr>
+                            <th><strong>focus</strong></th>
+                            <td>odpalane, gdy element stał się aktywny (np. pole tekstowe, link, button, element z
+                                tabindex)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><strong>blur</strong></th>
+                            <td>odpalane, gdy element przestał być aktywny (np. opuściliśmy input)</td>
+                        </tr>
+                        <tr>
+                            <th><strong>keydown</strong></th>
+                            <td>odpalane, gdy został naciśnięty klawisz na klawiaturze</td>
+                        </tr>
+                        <tr>
+                            <th><strong>keyup</strong></th>
+                            <td>odpalane gdy puścimy klawisz na klawiaturze</td>
+                        </tr>
+                        <tr>
+                            <th><strong>keydown</strong></th>
+                            <td>odpalane gdy naciśniemy klawisz, lub go przytrzymamy</td>
+                        </tr>
+                        <tr>
+                            <th><strong>input</strong></th>
+                            <td>odpalany gdy coś wpiszemy do pola, wybierzemy coś z selecta, klikniemy na input itp.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><strong>load</strong></th>
+                            <td>odpalane, gdy obiekt został załadowany (np. cała strona, pojedyncza grafika)</td>
+                        </tr>
+                        <tr>
+                            <th><strong>contextmenu</strong></th>
+                            <td>odpalane, gdy kliknięto prawym klawiszem myszki i pojawiło się menu kontekstowe</td>
+                        </tr>
+                        <tr>
+                            <th><strong>wheel</strong></th>
+                            <td>odpalane, gry kręcimy kółeczkiem myszki</td>
+                        </tr>
+                        <tr>
+                            <th><strong>select</strong></th>
+                            <td>odpalane, gdy zawartość obiektu została zaznaczona</td>
+                        </tr>
+                        <tr>
+                            <th><strong>unload</strong></th>
+                            <td>odpalane, gdy użytkownik opuszcza dana stronę</td>
+                        </tr>
+                        <tr>
+                            <th><strong>animationstart</strong></th>
+                            <td>odpalane, gdy animacja css się zacznie</td>
+                        </tr>
+                        <tr>
+                            <th><strong>animationend</strong></th>
+                            <td>odpalane, gdy animacja css się zakończy</td>
+                        </tr>
+                        <tr>
+                            <th><strong>animationiteration</strong></th>
+                            <td>odpalane, gdy animacja css zrobi jedną iterację</td>
+                        </tr>
+                        <tr>
+                            <th><strong>transitionstart</strong></th>
+                            <td>odpalane, gdy transition css się zacznie</td>
+                        </tr>
+                        <tr>
+                            <th><strong>transitionend</strong></th>
+                            <td>odpalane, gdy transition css się zakończy</td>
+                        </tr>
+                        <tr>
+                            <th><strong>transitionrun</strong></th>
+                            <td>odpalane, gdy transition zostanie stworzone (odpalane przed rozpoczęciem opóźnienia)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Lista wszystkich eventów pod tym linkiem na <a href="https://developer.mozilla.org/pl/docs/Web/Events"
+                    target="_blank">MDN</a></p>
+
+            <h3 id="styling">Stylowanie w JS</h3>
+            <p>
+                można lioniowo stylować za pomocą js, jednak do stylowania służy CSS</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">const zmienna1 = document.querySelector('div')
+zmienna1.style.border = '1px solid black'
+zmienna1.style.fontSize = '20px'</pre>
+            </div>
+
+            <h3 id="classCss">Dodawanie, usuwanie i zamian klas w css</h3>
+            <p>Do zmian klas używamy właściowości classList</p>
+            <p>dodawanie klasy
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">zmienna.classList.add('nazwa_dodawanej_klasy')
+//do zmiennej pobrano jakiś elelemnt
+w ktorym będziemy dodawać klasę</pre>
+                </div>
+            </p>
+            <p>odejmowanie klasy
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">zmienna.classList.remove('usuwawnej_klasy')</pre>
+                </div>
+            </p>
+            <p>zmiana klasy</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">zmienna.classList.toogle('nazwa_dodawanej/usuwawnej_klasy')</pre>
+            </div>
+            <h3 id="attributes">ATRYBUTY</h3>
+            <p>
+                <strong>setAttribute</strong> - służy do ustawiania atrybutów do tagów html. np można ustawić href dla
+                tagu
+                a
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">const link = querySelector('a')
+link.setAtrribute('target', "_blank")</pre>
+                </div>
+            </p>
+            <p><strong>getAttribute</strong> - zwraca wartość z podanego atrybutu w pobranym tsgu html
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">const image = querySelector('img')
+console.log(img.getAttribute('src'))
+//wyświetli w konsoli samą zawawrtość 
+z atrybutu src z pobranego obrazu img
+</pre>
+                </div>
+            </p>
+            <p><strong>hasAttribute</strong> - sprawdza czy pobrany element posiada dany atrybut i zwraca true lub false
+                <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                    <pre class="example hide">const image = querySelector('img')
+console.log(img.hasAttribute('alt')
+//wypisze w konsoli true jeśli img ma atrybut alt, 
+lub false jeśli nie ma</pre>
+                </div>
+            </p>
+            <p><strong>removeAttribute</strong> - usuwa dany atrybut z pobranego elementu. Można np usunąć dynamicznie
+                style
+                liniowe z danego elementu
+            </p>
+            <h3 id="relationship">RELACJE RODZINNE</h3>
+            <table class="tab">
+                <tbody>
+                    <tr>
+                        <th>element.parentElement</th>
+                        <td>rodzic elementu lub null</td>
+                    </tr>
+                    <tr>
+                        <th>element.nextElementSibling</th>
+                        <td>następny element (brat) lub null</td>
+                    </tr>
+                    <tr>
+                        <th>element.previousElementSibling</th>
+                        <td>poprzedni element (brat) lub null</td>
+                    </tr>
+                    <tr>
+                        <th>element.children</th>
+                        <td>dzieci elementu lub pusta tablica</td>
+                    </tr>
+                    <tr>
+                        <th>element.firstElementChild lub element.children[0]</th>
+                        <td>pierwsze dziecko elementu lub null</td>
+                    </tr>
+                    <tr>
+                        <th>element.lastElementChild lub element.children[element.children.length-1]</th>
+                        <td>ostatnie dziecko elementu lub null</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>METODA closest() <br>
+                                <i>element.closest("selektor-css")</i>
+                            </p>
+                        </th>
+                        <td>idąc w górę drzewa odnajduje najbliższy element który pasuje do selektora</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="dataset">DATASET</h3>
+            <p>zwraca (obiekt) dataset, który przetrzymuje customowe atrybuty w tagach html (data-...). <br>
+                <a href="http://kursjs.pl/kurs/dom/dom-wlasciwosci.php#dataset" target="_blank">świetnie opisane na
+                    kursjs.pl</a>
+            </p>
+            <h3 id="popups">alert, confirm, prompt</h3>
+            <p>Wyskakujące okna. Służą do informowania użytkownika. Nie nadużywać. Nie można ich stylować. Lepiej
+                napisać
+                własny ładny modal czy popup.</p>
+            <p><strong> alert</strong> - Po wywołaniu metody alert() zostaje wyświetlone okienko z komunikatem i
+                przyciskiem
+                OK</p>
+            <p><strong>confirm</strong> - Okienko confirm służy do tego, aby użytkownik coś potwierdził (stąd nazwa
+                confirm).
+                Do metody confirm() przekazywany jest tylko jeden parametr zawierający treść jaka będzie wyświetlana w
+                okienku. Okienko to wyświetla dwa guziki: OK i ANULUJ. Confrim może służyć do informowania uzytkownika
+                ze
+                opuszcza strone (np podczas pisania postu na fb) i gdy kliknie ok stronia sie zamknie a gdy cancel
+                pozostanie na stronie i moze dalej edytowac post. </p>
+            <p><strong>prompt </strong>- Do funkcji prompt przekazujemy dwa parametry - jeden jest treścią, która będzie
+                wyświetlana w okienku, a drugi jest domyślną wartością, która będzie wyświetlana w polu, w które
+                wpisujemy
+                tekst. Jeżeli użytkownik kliknie [ANULUJ], zostanie zwrócona wartość null, w przeciwnym razie zostanie
+                zwrócona wartość wpisana w pole okienka.</p>
+            <a href="http://kursjs.pl/kurs/okna-dialogowe.php" target="_blank">Szczegółowe informacje pod tym
+                linkiem</a>
+            <h3 id="id">ID jako zmienna</h3>
+            <p>JS elementy ID z html ustawia automatycznie jako zmienne</p>
+
+        </section>
+        <section id="setTimeout">
+            <h2>setTimeout i setInterval
+            </h2>
+            
+            <p><strong>setTimeout</strong>  służy do opoźniania wykonania funkcji. Czas podajemy w milisekundach. Wykonuje się raz po
+                podanym
+                czasie
+            </p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+setTimeout(nazwa_funkcji, 1000)
+//opóznienie o 1000ms czyli o 1s
+</pre>
+            </div>
+            <p><strong>setInterval</strong>  służy do wykonywaniac funkcji co podany czas w milisekundach</p>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+setInterval(nazwa_funkcji, 1000)
+//wykona fukcję po 1000ms czyli po 1s,
+a pożniej co 1000ms będzie się wuykonywać
+</pre>
+            </div></section>
+            <section id="math">
+
+            <h2>Obiekt Math</h2>
+            <p>Wbudowany obiekt zawierający własności i metody związane z funkcjami i stałymi matematycznymi. Na
+                przykład
+                własność PI obiektu Math zawiera wartość liczby pi. Dzieki Math można porównywać np, która liczba jest
+                większa, obliczyć logarytm, zwroci sinus i wiele innych</p>
+            <p>Math.random() - metoda ta zwraca losową liczbę z przedziału 0-1. Można np pomnożyć i wtedy będzie inny
+                przedział np Math.random()*10 będzie wybierał liczby z przediału 1-10</p>
+            <p>Wszystkie metody i własności na <a
+                    href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Math"
+                    target="_blank">MDN</a></p>
+
+
+        </section>
+        <section id="regexp">
+            <h2>RegExp - wyrażenia regularne</h2>
+            <a href="http://kursjs.pl/kurs/regular.php" target="_blank">link do kursjs.pl</a>
+            <p><strong>tylko liczby (również z kropkami)</strong><br> /^\-?([1-9]\d*|0)(\.\d?[1-9])?$/ </p>
+
+
+        </section>
+        <section id="strict-mode">
+            <h2>Strict mode</h2>
+            <a href="http://kursjs.pl/kurs/super-podstawy/strict-mode.php" target="_blank">KURSJS.PL - STRICT MODE</a>
+            <p>Resgtrykcyjny tryb wprowadzania kodu. Nie wybacza żadnych cichych błędów, pomyłek, niedomówień. Strict
+                mode to funkcjonalność wprowadzona w ES5 (ECMAScript 2009)</p>
+            <p>Domyślnie tryb ten jest wyłączony. Aby go włączyć, na początku naszego kodu musimy użyć zapisu "use
+                strict"</p>
+            <p>W klasach strict mode jest włączony automatycznie</p>
+            <p>Taki tryb możemy włączać nie tylko dla całego kodu, ale i dla poszczególnych funkcji umieszczając go na
+                ich początku.</p>
+        </section>
+        <section id='codes'>
+            <h2>Gotowe kawałki kodu</h2>
+            <h3>Pobieranie kilku takich samych elementów i działania na nich poprzez pętle for</h3>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">
+    const btns = document.querySelectorAll('button');
+
+    for(const btn of btns){
+        btn.addEventListener('click', function () {
+            console.log(this.innerText);
+            //wyswietli w konsloi zawartość klikniętego buttona
+        })
+    };
+</pre>
+            </div>
+
+            <h3 id="multilevelmenu">Menu multilevel</h3>
+            <div class="exampleContainer"><button class="showExample">Pokaż przykład</button>
+                <pre class="example hide">const menus = document.querySelectorAll('.menu');
+const subMenus = document.querySelectorAll('.subMenu');
+
+for (const menu of menus) {
+    menu.addEventListener('mouseover', function () {
+        this.lastElementChild.classList.remove('hideSubMenu');
+    });
+    menu.addEventListener('mouseout', function () {
+        this.lastElementChild.classList.add('hideSubMenu');
+    });
+    menu.addEventListener('click', function () {
+        this.lastElementChild.classList.add('hideSubMenu');
+    });
+};
+
+for (const subMenu of subMenus) {
+    subMenu.addEventListener('click', function () {
+        this.classList.add('hideSubMenu');
+    });
+};
+
+</pre>
+            </div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
