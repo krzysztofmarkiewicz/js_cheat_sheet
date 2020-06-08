@@ -539,7 +539,8 @@ class Driver extends Person {
         this.license = license;
     }
     isDriver() {
-        console.log(`${this.name} ma ${this.age} lata i posiada prawo jazdy kategorii ${this.license}`)
+        console.log(`${this.name} ma ${this.age} lata 
+        i posiada prawo jazdy kategorii ${this.license}`)
     }
 }
 
@@ -2211,7 +2212,9 @@ btn.addEventListener('click', function () {
 
 
     fetch(url) //pobieramy dane z API 
-        .then(res => res.json()) //(res od response=odpowiedź) przekonwertowujemy na json i otrzymujemy prosty obiekt
+        .then(res => res.json()) 
+        //(res od response=odpowiedź) przekonwertowujemy na json 
+        //i otrzymujemy prosty obiekt
         .then(res => {
             img.setAttribute('src', res.message) // wykonujemy
             //jakiś kod, w tym przypadku przypisujemy do src obrazu link,
