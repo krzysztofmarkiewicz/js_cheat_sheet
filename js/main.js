@@ -5,7 +5,6 @@ const infoNav = nav.getBoundingClientRect()
 const heightNav = infoNav.height;
 
 
-
 for (const menu of menus) {
     menu.addEventListener('mouseover', function () {
         this.lastElementChild.classList.remove('hideSubMenu');

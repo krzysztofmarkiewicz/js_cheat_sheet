@@ -2605,6 +2605,12 @@ document.body.removeChild(zmienna1)
 
             <p>useCapture - false or true (domyślnie false) - rzadzko uzywany, w wyjątkowych sytuacjach </p>
             <p>addEventListener zawsze dajemy na dole (ponizej funkcji)</p>
+            <p><strong>e.preventDefault() -</strong> Wstrzymanie domyślnej akcji <br>
+
+                Niektóre elementy na stronie mają swoje domyślne akcje. Linki przenoszą w jakieś miejsca, formularze się wysyłają itp. <br>
+                
+                Aby zapobiec wykonaniu domyślnej akcji skorzystamy z metody e.preventDefault() <br>
+                Niektórych zdarzeń nie da się w ten sposób zatrzymać (np. load), o czym mówi nam właściwość e.cancelable.</p>
             <div>
                 <p>Lista najczęściej używanych zdarzeń</p>
                 <table class="tab">
@@ -2898,6 +2904,10 @@ a pożniej co 1000ms będzie się wuykonywać
         <section id="regexp">
             <h2>RegExp - wyrażenia regularne</h2>
             <a href="http://kursjs.pl/kurs/regular.php" target="_blank">link do kursjs.pl</a>
+<p><strong>metoda do porównywania regexp ze stringiem</strong> <br>
+    regexp.test(ciąg_znaków)
+</p>
+<br>
             <p><strong>tylko liczby (również z kropkami)</strong><br> /^\-?([1-9]\d*|0)(\.\d?[1-9])?$/ </p>
 
 
